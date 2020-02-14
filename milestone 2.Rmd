@@ -1,0 +1,27 @@
+---
+title: "Milestone 2"
+author: "Ruth Zheng"
+date: "2/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include = FALSE}
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(janitor)
+
+```
+
+```{r}
+#clean_names
+data = read.csv("ACS_15_5YR_S1903_with_ann.csv", skip = 1) %>%
+  clean_names()
+
+head(data)
+```
