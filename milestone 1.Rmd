@@ -7,11 +7,30 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, include = FALSE}
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(janitor)
+
+```
+
+#Milestone 1
+
 Paper link:
 
 http://mhankinson.com/assets/hankinson_magazinnik.pdf
 
-As of now, I am planning to replicate the paper, “How Electoral Institutions Shape the Efficiency and Equity of Distributive Policy.” Treating the California Voting Rights Act of 2001 as a conditionally exogenous reform that resulted in hundreds of California cities to switch from multi-member to single-member elections for city council, the paper analyzes data of geo-coded housing approvals to explore the impact of district elections on spatial distribution of new housing. Hankinson and Magazinnik use panel data (fixed effects regression) to find that district specific representation causes a substantial decrease in approvals of multi-family housing.   
+As of now, I am planning to replicate the paper, “How Electoral Institutions Shape the Efficiency and Equity of Distributive Policy.” Treating the California Voting Rights Act of 2001 as a conditionally exogenous reform that resulted in hundreds of California cities to switch from multi-member to single-member elections for city council, the paper analyzes data of geo-coded housing approvals to explore the impact of district elections on spatial distribution of new housing. Hankinson and Magazinnik use panel data (fixed effects regression) to find that district specific representation causes a substantial decrease in approvals of multi-family housing.  
 
+#Milestone 2
+
+```{r}
+#clean_names
+data = read.csv("ACS_15_5YR_S1903_with_ann.csv", skip = 1) %>%
+  clean_names()
+
+```
 
 
