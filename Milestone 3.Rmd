@@ -1,0 +1,14 @@
+---
+title: "Milestone 3"
+author: "Ruth Zheng"
+date: "2/23/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Paper Summary
+
+In the paper, \textit{When Do Renters Behave Like Homeowners? High Rent, Price Anxiety, and NIMBYism}, Michael Hankinson performs a quantitative analysis of NIMBYism applied to trends in local housing markets. Asking the question of what drives homeowners and renters to embrace NIMBY attitudes towards housing, the paper draws upon two original data sets: the first an exit-poll survey of politically active San Francisco voters in a municipal election and the second a nation-wide set of survey data. The paper first finds that in the San Francisco set, renters more often than homeowners, indicated that they would support a ban on the creation of new housing. This is a surprising result because one would expect renters to support new housing as greater supply will drive prices down -- this is good for renters, but bad for homeowners. Hankinson suspects this discrepancy is due to a fear of gentrification, that new developments will attract even greater demand causing renters to be priced out of their homes. The second part of the paper analyzes the nationwide data from a survey that was cleverly constructed to offer random combinations of several significant attributes of hypothetical new housing developments (such as stories, rent v. own, distance from ones own neighborhood, etc.) to respondants who were then asked to indicate whether they would support such a development. This allowed Hankinson to isolate specific attributes and quantify their effects on attitudes towards new housing. This part first finds that distance to the respondant's neighborhood has a significant and negative relationship to opposing new housing, confirming the NIMBYism theory. It then analyzes a separate question on the survey that attempted to guage respondant's level of price anxiety (fear that neighborhood prices would rise, i.e. fear of gentrification). The paper found that high price anxiety renters had a significantly higher tendency to oppose new housing developments, thus resolving the earlier discrepancy. Indeed renters do behave like homeowners when they live in high price neighborhoods and fear rising prices. 
