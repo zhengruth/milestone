@@ -1,0 +1,135 @@
+---
+title: "Milestone 5"
+author: "Ruth Zheng"
+date: "3/30/2020"
+header-includes:
+- \usepackage{caption}
+- \usepackage{multirow}
+- \usepackage{dcolumn}
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load packages, include = FALSE}
+library(stargazer)
+library(lmtest)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(gt)
+library(janitor)
+library(sandwich)
+```
+
+
+# INTRODUCTION
+
+Experimental footnote \footnote{All analysis of this paper is available at: https://github.com/zhengruth/milestone}. 
+
+# GRAPHIC
+
+
+```{r do calculations , include = FALSE}
+final<-read.csv("sfDataAPSR.csv", stringsAsFactors = F)
+#View(final)
+
+owners<-subset(final, ownership_dummy==1)
+renters<-subset(final, ownership_dummy==0)
+
+control<-subset(final, version==5 | version==6)
+control_owners<-subset(control, ownership_dummy==1)
+control_renters<-subset(control, ownership_dummy==0)
+
+control_owners_yes<-subset(control_owners, ten_plan_dummy==1)
+control_owners_no<-subset(control_owners, ten_plan_dummy==0)
+
+control_renters_yes<-subset(control_renters, ten_plan_dummy==1)
+control_renters_no<-subset(control_renters, ten_plan_dummy==0)
+
+table(control_owners_yes$prop_i_ban_dummy)
+29/(29+49) #.37
+table(control_owners_no$prop_i_ban_dummy)
+15/30 #.50
+
+table(control_renters_yes$prop_i_ban_dummy)
+79/(79+73) #.52
+table(control_renters_no$prop_i_ban_dummy)
+22/(22+5) #.81
+```
+
+```{r create plot, echo = FALSE}
+
+support<-c(.37, .50, .52, .81)
+Tenant<-c("Homeowners", "Homeowners", "Renters", "Renters")
+supply<-c("Pro-Supply", "Anti-Supply","Pro-Supply","Anti-Supply")
+supply<-factor(supply, levels=c("Pro-Supply", "Anti-Supply"))
+
+ban_plot<-data.frame(Tenant, support, supply)
+
+exitpoll_ban<-ggplot(data=ban_plot, aes(x=Tenant, y=support, fill=Tenant))+
+  geom_bar(colour="black",stat="identity", position=position_dodge()) + facet_wrap(~supply) +
+  ylab("Support (Percent)") + theme(legend.position="none") +ggtitle( "Support for Micro-scale Ban by Support for Macro-scale Supply")+
+  theme_bw()+scale_fill_grey()
+
+exitpoll_ban
+```
+
+# Overview
+
+Hankinson's paper on NIMBYism draws from two sets of data pertaining to attitudes towards affordable housing: the first contains the results from an exit-poll survey of San Francisco voters from a municipal election and the second contains nation-wide conjoint survey data. First, Hankinson uses summary statistics to show that a higher proportion of San Francisco renters oppose new housing in their neighborhoods than homeowners and that the same renters show greater support for city wide housing. He also uses ordinary least squares regression (lm command) to regress support for the two proposed policies (10\% supply increase and NIMBY ban proposal) on homeownership, controlling for political ideology, log income, age, race, and gender. He finds that in both instances, home ownership is negatively correlated with support (more strongly for NIMBY ban proposal). Next Hankinson uses the conjoint data to attempt to answer the question of what causes renters to behave like homeowners in their exhibiting of NIMBYism. He runs regressions using the AMCE package (for estimating causal effects in conjoint experiments), estimate the effect of proximity on renters' and then homeowners' support of a hypothetical new building in their neighborhood by affordability of proposed housing. He then tries to guage this effect by grouping renters into quintiles based on average rent. He then performs the same AMCE regressions on the response variables of whether or not renters and owners support towards different policies such as 10\% increase in city-wide housing supply (grouped by average city-wide rent) and market rate housing (grouping by attitude toward housing prices citywide). Hankinson shows that spatial scale directly affects policy support. That is, his results suggest that renters in high-rent cities such as San Francisco tend to support housing in general, but exhibit NIMBYism, thus behaving like homeowners, when they face the prospect of market-rate housing in their own neighborhood. Further, these preferences seem to only apply to market-rate housing, not affordable housing. In addition, they are correlated with housing price anxiety. As a result, Hankinson concludes that renters must be responding to the threat of gentrification in their neighborhoods. 
+
+# BIBLIOGRAPHY
+
+Hankinson, M. (2018). When Do Renters Behave Like Homeowners? High Rent, Price Anxiety, and NIMBYism. American Political Science Review, 112(3), 473-493. doi:10.1017/S0003055418000035
+
+Altshuler, Alan A., and David E. Luberoff. 2003. \textit{Mega-Projects: The Changing Politics of Urban Public Investment.} Washington, DC: Brookings Institution Press.
+
+Angotti, Tom. 2008. \textit{New York For Sale: Community Planning Con- fronts Global Real Estate.} Cambridge, MA: MIT Press.
+Autor, David H., Christopher J. Palmer, and Parag A. Pathak. 2014. “Housing Market Spillovers: Evidence from the End of Rent Con- trol in Cambridge, Massachusetts.” Journal of Political Economy 122 (3): 661–717.
+
+Autor, David H., Palmer, Christopher J., and Pathak, Parag A.. 2014. “Housing Market Spillovers: Evidence from the End of Rent Control in Cambridge, Massachusetts.” Journal of Political Economy 122 (3): 661–717
+
+Banfield, Edward C., and James Q. Wilson. 1963. \textit{City Politics.} Cambridge, MA: Harvard University Press.
+
+
+
+# APPENDIX
+
+
+```{r run regressions, include = FALSE}
+
+# Run Regressions
+
+simple_control<-(lm(ten_plan_dummy ~ ownership_dummy, final)); summary(simple_control)
+simple_control_se<-sqrt(diag(vcovHC(simple_control, type="HC1")))
+
+full_control<-(lm(ten_plan_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , control)); summary(full_control)
+full_control_se<-sqrt(diag(vcovHC(full_control, type="HC1")))
+
+simple_prop_i_ban<-(lm(prop_i_ban_dummy ~ ownership_dummy  , final)); summary(simple_prop_i_ban)
+simple_prop_i_ban_se<-sqrt(diag(vcovHC(simple_prop_i_ban, type="HC1")))
+
+full_prop_i_ban<-(lm(prop_i_ban_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , final)); summary(full_prop_i_ban)
+full_prop_i_ban_se<-sqrt(diag(vcovHC(full_prop_i_ban, type="HC1")))
+
+```
+
+```{r regression table, results = "asis", echo = FALSE}
+
+# Table Using Stargazer
+
+stargazer(simple_control, full_control, simple_prop_i_ban, full_prop_i_ban,  title="Policy Proposals, San Francisco Sample",  label="sf_policies",
+          dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("10% Supply", "NIMBY Ban Proposal" ), column.separate = c(2, 2),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T, type='html',
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se, simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T, out = "models.htm")
+```
+
+
+![Actual Table from Paper](Snip20200330_1.png)
+
