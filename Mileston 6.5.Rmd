@@ -1,5 +1,5 @@
 ---
-title: "Milestone 6.5"
+title: "When Renters Behave Like Homeowners"
 author: "Ruth Zheng"
 date: "4/15/2020"
 output: pdf_document
@@ -17,3 +17,16 @@ I would like to extend Hankinson's analysis by going beyond an OLS linear model 
 # Literature Review
 
 In recent decades, the housing market has seen a trend of widening inequality. Prices in the top quintile have dramatically increased, particularly in "superstar" cities such as San Francisco, New York City, and Los Angeles. This has resulted in an apparent decoupling of supply and demand where cities face a housing shortage despite increasing growth and jobs. Most scholars in the field attribute this trend to policy regulation such as density limits and number of permits given (Glaeser and Ward 2009). For the most part, this should be expected to occur in suburbs, or areas where there is a large density of home ownership, as homeowners should have a greater steak in the property values of their homes and thus be more sensitive to new housing construction. However, this trend has begun to appear even in cities where a majority of residents are renters. This is an unexpected outcome, renters displaying NIMBY voting and other political behavior. One theory in the literature is that renters are worried about gentrification (Florida 2017; Sullivan 2007).
+
+# BIBLIOGRAPHY
+
+Hankinson, M. (2018). When Do Renters Behave Like Homeowners? High Rent, Price Anxiety, and NIMBYism. American Political Science Review, 112(3), 473-493. doi:10.1017/S0003055418000035
+
+Altshuler, Alan A., and David E. Luberoff. 2003. \textit{Mega-Projects: The Changing Politics of Urban Public Investment.} Washington, DC: Brookings Institution Press.
+
+Angotti, Tom. 2008. \textit{New York For Sale: Community Planning Con- fronts Global Real Estate.} Cambridge, MA: MIT Press.
+Autor, David H., Christopher J. Palmer, and Parag A. Pathak. 2014. “Housing Market Spillovers: Evidence from the End of Rent Con- trol in Cambridge, Massachusetts.” Journal of Political Economy 122 (3): 661–717.
+
+Autor, David H., Palmer, Christopher J., and Pathak, Parag A.. 2014. “Housing Market Spillovers: Evidence from the End of Rent Control in Cambridge, Massachusetts.” Journal of Political Economy 122 (3): 661–717
+
+Banfield, Edward C., and James Q. Wilson. 1963. \textit{City Politics.} Cambridge, MA: Harvard University Press.
