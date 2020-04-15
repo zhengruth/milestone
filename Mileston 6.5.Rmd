@@ -1,0 +1,19 @@
+---
+title: "Milestone 6.5"
+author: "Ruth Zheng"
+date: "4/15/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+In his paper, Hankinson uses the San Francisco specific and Non-Conjoint National Survey data sets to explore differing levels of NIMBY-ism exhibited by renters and homeowners. He measures this outcome using two binary response variables, whether they indicate support for a 10\% supply increase in housing and whether they support a ban on neighborhood development. In both the San Francisco city-specific set which he collects from exit-polling, and the nation-wide survey data, Hankinson considers the demographic controls through the following covariates: homeownership status, Ideology, Income, Race, Age, and Gender. For the San Francisco set he runs two models for each response variable using the lm command: a bivariate regression and a full model including all of the predictors. For the nation-wide data set, Hankinson runs three models: a bivariate regression, a full model, and a full model including municipal fixed effects (holding municipality constant). 
+I would like to extend Hankinson's analysis by going beyond an OLS linear model and using logistic regression. I think this would be appropriate for two reasons. First, using a linear approximation runs the risk of breaking axioms of probability when considering a binary response variable because while it is estimating probabilities, it is possible for the predicted value at certain values for the covariates to go outside of 0 and 1. Second, logistic regression allows us to consider the possibility that the relationship between home ownership status and NIMBY-ism is not linear. It enables one to model probabilities continuously while ols can only give discrete outcomes. I will then re-fit these four models for the SF data set and six models for the nation-wide set using logistic and interpret the results. Then I would like to compare the results with those found using the LM command. Finally, I will discuss the discrepencies (or lack thereof). This will be informed by Chapters 13 and 14 of RAOS. 
+
+# Literature Review
+
+In recent decades, the housing market has seen a trend of widening inequality. Prices in the top quintile have dramatically increased, particularly in "superstar" cities such as San Francisco, New York City, and Los Angeles. This has resulted in an apparent decoupling of supply and demand where cities face a housing shortage despite increasing growth and jobs. Most scholars in the field attribute this trend to policy regulation such as density limits and number of permits given (Glaeser and Ward 2009). For the most part, this should be expected to occur in suburbs, or areas where there is a large density of home ownership, as homeowners should have a greater steak in the property values of their homes and thus be more sensitive to new housing construction. However, this trend has begun to appear even in cities where a majority of residents are renters. This is an unexpected outcome, renters displaying NIMBY voting and other political behavior. One theory in the literature is that renters are worried about gentrification (Florida 2017; Sullivan 2007).
