@@ -1,0 +1,85 @@
+---
+title: "Milestone 7"
+author: "Ruth Zheng"
+date: "4/17/2020"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Abstract
+
+Hankinson (2018) shows that renters exhibit "Not in My Back Yard" (NIMBY) behavior on par with homeowners in high-rent cities despite overall support for a housing supply increase. This increased likelihood to reject policy proposals that create new housing helps explain the affordable housing crisis in major American cities. 
+
+# Introduction
+
+# Literature Review
+
+In recent decades, the housing market has seen a trend of widening inequality. Prices in the top quintile have dramatically increased, particularly in “superstar” cities such as San Francisco, New York City, and Los Angeles. This has resulted in an apparent decoupling of supply and demand where cities face a housing shortage despite increasing growth and jobs. Most scholars in the field attribute this trend to policy regulation such as density limits and number of permits given (Glaeser and Ward 2009). For the most part, this should be expected to occur in suburbs, or areas where there is a large density of home ownership, as homeowners should have a greater steak in the property values of their homes and thus be more sensitive to new housing construction. However, this trend has begun to appear even in cities where a majority of residents are renters. This is an unexpected outcome, renters displaying NIMBY voting and other political behavior. One theory in the literature is that renters are worried about gentrification (Florida 2017; Sullivan 2007).
+
+# Replication
+
+Hankinson's original paper includes 27 figures. I have replicated 21 of them. Those that I have not replicated are mainly clarifying tables, that is they include summary statistics, demonstrate theoretical results, or attempt to illustrate a hypothetical example. I chose not to replicate these tables because they do not directly pertain to the actual analysis of Hankinson's data set and thus do not contribute to answering the research question about what factors are associated with renters exhibiting NIMBY behavior. 
+
+# Extension
+
+I extend Hankinson's analysis by going beyond an OLS linear model and using logistic regression.Logistic regression allows us to consider the possibility that the relationship between home ownership status and NIMBY-ism is not linear. It enables one to model probabilities continuously while ols can only give discrete outcomes. I refit a bivariate, full, and full with fixed effects model for the national data set with the logit of the probability of supporting the policy proposal of a 10\% increase in housing supply as the response variable. 
+
+```{r load packages, include = FALSE}
+library(stargazer)
+library(lmtest)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(gt)
+library(janitor)
+library(sandwich)
+library(cjoint)
+```
+
+
+```{r read data, include = FALSE}
+socpoc<-read.csv("data/socpocAPSR.csv", stringsAsFactors = F)
+
+#assign ownership groups
+renters<-subset(socpoc, own==0)
+owners<-subset(socpoc, own==1)
+
+
+## Simple Logistic
+
+model_1 <- glm(supply_dummy ~ own, socpoc, family = "binomial")
+model_1_se<-sqrt(diag(vcovHC(model_1, type="HC1")))
+
+
+## Full
+
+model_2 <- glm(supply_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc), family = "binomial")
+model_2_se<-sqrt(diag(vcovHC(model_2, type="HC1")))
+
+# Full w/ fixed effects
+
+model_3<- glm(supply_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc, family = "binomial")
+model_3_se<-sqrt(diag(vcovHC(model_3, type="HC1")))
+
+
+```
+
+```{r, echo = FALSE, results = 'asis'}
+# Create Regression Table
+
+stargazer(model_1,  model_2 , model_3, title="Probability of Supporting 10 Percent Supply Increase", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="html",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(model_1_se, model_2_se, model_3_se), no.space=T,omit=c("name"))
+
+```
+
+
+
+# Appendix
+
+# Works Cited
