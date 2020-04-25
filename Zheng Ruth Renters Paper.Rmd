@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Abstract
 
-Hankinson (2018) shows that renters exhibit "Not in My Back Yard" (NIMBY) behavior on par with homeowners in high-rent cities despite overall support for a housing supply increase. I successfully replicated Hankinson's results. The increased likelihood for these renters to reject policy proposals that create new housing helps explain the affordable housing crisis in major American cities. 
+Hankinson (2018) shows that renters exhibit "Not in My Back Yard" (NIMBY) behavior on par with homeowners in high-rent cities despite overall support for a housing supply increase. I successfully replicated Hankinson's results. The increased likelihood for these renters to reject policy proposals that create new housing helps explain the affordable housing crisis in major American cities.^[All analysis for this paper is available at: https://github.com/zhengruth/replication_renters_paper_1006]
 
 # Introduction
 
