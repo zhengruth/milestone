@@ -1,0 +1,2598 @@
+---
+title: "Draft: Replication of \"When Do Renters Behave Like Homeowners? High Rent, Price Anxiety, and NIMBYism\""
+author: "Ruth Zheng"
+date: "April 24, 2020"
+output:
+  bookdown::pdf_document2:
+    keep_tex: true
+    toc: False
+header-includes:
+    - \usepackage{dcolumn}
+    - \usepackage{float}
+bibliography: Bibliography.bib
+nocite: |
+  @*
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Abstract
+
+Hankinson (2018) shows that renters exhibit "Not in My Back Yard" (NIMBY) behavior on par with homeowners in high-rent cities despite overall support for a housing supply increase. I successfully replicated Hankinson's results. The increased likelihood for these renters to reject policy proposals that create new housing helps explain the affordable housing crisis in major American cities. 
+
+# Introduction
+
+Using original data sets from an exit poll in San Francisco and a nation-wide survey, Hankinson shows that renters are more likely to exhibit NIMBY-ism when they live in high density cities with high price levels controlling for other demographic characteristics -- hankinson demonstrates this statistically significant and positive relationship between neighborhood price levels and two response variables: one indicating opposition to a housing supply increase and the other support for a ban on neighborhood development in both "ordinary" data sets and a set from a nation-wide conjoint survey. The data also confirms the prevailing assumption that renters are more likely to support housing supply increases in general. Hankinson reasons a causal mechanism for this surprising trend may be that renters in high-rent neighborhoods fear that new housing may spur gentrification which would only further drive rent up. Exploring this hypothesis, he shows a significant and positive relationship between housing price-related anxiety and renters' likelihood for exhibiting NIMBY-ism.  
+
+# Literature Review
+
+In the past 30 years, the housing market has seen a trend of widening inequality (Glaeser, Gyourko, and Saks 2005). Prices in the top quintile have dramatically increased, particularly in crowded, “superstar” cities such as San Francisco, New York City, and Los Angeles. Yet, the resulting housing shortage cannot be attributed to a natural supply ceiling alone (Glaeser, Gyourko, and Saks 2008; Solnit and Schwartzenberg 2000). Glaeser and Gyourko find that in Manhattan prices are twice their supply costs (Glaeser, Gyourko, and Saks 2008). Likewise, Barton demonstrates that in San Francisco, high rents cannot be accounted for by higher real value -- that is, quality, operating costs, and construction costs (Barton 2011). They argue that the decoupling of supply and demand in Manhattan and other major cities must be attributed at least in part to regulation constraining the housing supply (Glaeser, Gyourko, and Saks 2008). Specifically, land-use regulations are associated with reductions in construction activity and higher prices (Glaeser and Ward 2008; Ilhanfeldt 2007). In fact, the responsiveness of the housing supply to increased demand seems to depend significantly on land use and planning regulations (Caldera and Johansson 2013). This is particularly true in high-price locales such as the greater Boston area (Glaeser and Ward 2008) and the San Francisco Bay Area (Kok, Monkkonen, and Quigley 2014).
+
+It is generally accepted that homeowners have an incentive to support regulations that raise the value of their homes (Glaeser, Gyourko, and Saks 2005; Quigley and Rosenthal 2005; Rohe and Stewart 1996). Typically higher income homeowners are the ones who dominate local politics underlying land use enactments (Quigley and Rosenthal 2005). On the other hand, renters, who usually want lower prices, are expected to support policies and public spending that favor constructing new housing (Brunner, Ross, and Simonsen 2015; Desmond 2017). However, this dynamic cannot entirely explain persistent supply-discouraging regulations in major cities where homeownership rates are lower and pale in comparison to renters. 
+
+Hankinson hypothesizes that in high-rent cities, renters adopt a form of "Not in My Back Yard-ism" (NIMBY-ism). This would give rise to a collective action problem in the political-economy of local housing wherein despite supporting city-wide housing supply increases and other policies favoring affordable housing, renters oppose such policies in their own neighborhoods. As a result, no neighborhood is politically willing to bear the cost of new housing. While there is a rich existing literature on NIMBY-ism among homeowners (Dear 1992; Schively 2007), there has been comparatively little research done on the appearance of this behavior among renters (Fischel 2000). In fact, renters are expected to exhibit lower levels of NIMBY-ism as the ephemerality of renting means they have less of a stake in the good or bad things that happen in their neighborhoods (Moomau and Morton 1992). Renters' behavior in high-rent cities demands closer examination. What is driving renters to continue to enact housing regulations? And, what external and/or demographic factors cause renters policy behavior to become sensitive to the proximity  of proposed new housing? 
+
+
+# Replication
+
+Hankinson's original paper includes 27 figures. I have replicated 21 of them. Those that I have not replicated are mainly clarifying tables, that is they include summary statistics, demonstrate theoretical results, or attempt to illustrate a hypothetical example. I chose not to replicate these tables because they do not directly pertain to the actual analysis of Hankinson's data set and thus do not contribute to answering the research question about what factors are associated with renters exhibiting NIMBY behavior. 
+
+# Extension
+
+I extend Hankinson's analysis by using logistic regression to refit three sets of models: the first set (table A.3) regresses an indicator variable for supporting a 10 \% housing supply increase and one for supporting a NIMBY ban onto homeownership status including demographic controls and fixed effects for the San Francisco data set; the second (table B.2) regresses an indicator for supporting a 10\% supply increase onto homeownership status including demographics and fixed effects for the natiowide data set; the third (table B.4) regresses an indicator for supporting a ban on neighborhood development (NIMBY ban) on homeownership status including demographic controls and fixed effects for the nationwide data set. While Hankinson fits ordinary least squares models, likely for ease of comparison, this risks violating normality of errors and allows the response variable to exceed the scope of 0 and 1 which breaks probability axioms. A logistic regression can better model a range of probabilities using the logistic function which is strictly between 0 and 1. 
+
+The logistic output for the first set of regressions (table A.3) showed a consistently negative relationship between homeownership and both the probability of supporting a 10\% supply increase and for supporting a NIMBY ban. Using the divide by four rule, holding all else constant, homeowners are about 10\% less likely to support both the supply increase and the neighborhood ban than renters. These estimates, however, are not statistically significant. This is consistent with the OLS model which outputs a weak and consistently negative coefficients on homeownership status. The logistic output for the second set of regressions (table B.2) showed a consistently negative and statistically insignificant relationship between homeownership status and probability of supporting a 10\% supply increase. Using the divide by four rule, the logistic regression estimates that holding all else constant homeowners are at most 25\% less likely to support the increase. Although these estimates are constitent in sign and magnitude with the OLS estimates, the OLS coefficients are statistically significant. Finally, the logistic output for the third set of regressions (table B.4) showed a consistently positive and, once again, statistically insignificant relationship between homeownership and probability of supporting a ban on neighborhood development. Holding all else constant, homeowners are at most 7.5\%. more likely to support the ban than renters. This is again consistent with the OLS results with the primary difference being that the OLS coefficients are statistically significant at the $\alpha = .05$ level. 
+
+These results confirm the puzzle Hankinson attempts to elucidate: despite an overall tendency for homeowners to be more likely than renters to exhibit NIMBY behavior, why do renters seem to demonstrate NIMBY-ism on par with, if not even more than, homeowners in a housing market like that of San Francisco?
+
+
+```{r load packages, include = FALSE}
+library(stargazer)
+library(lmtest)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(gt)
+library(janitor)
+library(sandwich)
+library(cjoint)
+```
+
+
+```{r read data, include = FALSE}
+socpoc<-read.csv("data/socpocAPSR.csv", stringsAsFactors = F)
+
+#assign ownership groups
+renters.socpoc<-subset(socpoc, own==0)
+owners.socpoc<-subset(socpoc, own==1)
+
+```
+
+```{r Read Data and Clean National Conjoint, include = FALSE}
+
+conjoint4<-read.csv("data/conjointDataAPSR.csv")
+table(conjoint4$own)
+#relevel
+conjoint4$distance <- factor(conjoint4$distance,levels= c("2 miles (40 minute walk)", "1 mile (20 minute walk)", "1/2 mile (10 minute walk)","1/8 mile (2 minute walk)"))
+conjoint4$community <- factor(conjoint4$community,levels= c("No opinion", "Support the building", "Oppose the building"))
+conjoint4$affordable <- factor(conjoint4$affordable,levels= c("None of the units", "One-quarter of the units", "Half of the units", "All of the units"))
+conjoint4$height <- factor(conjoint4$height,levels= c("2 stories", "3 stories", "6 stories", "12 stories"))
+conjoint4$site <- factor(conjoint4$site, levels=c("Empty building","Parking lot","Open field","Historically-designated building"))
+names(conjoint4)
+#reclassify items as factor
+cols<-c("own", "whitenh", "nearby","conjoint_first","rich", "luxury")
+
+conjoint4[cols] <- data.frame(apply(conjoint4[c(cols)], 2, as.factor))
+
+# dummies
+conjoint4$liberal<-as.factor(ifelse(conjoint4$ideology>4,1,ifelse(conjoint4$ideology<4,0, NA)))
+conjoint4$city_interest_low<-as.factor(ifelse(conjoint4$city_interest<0,1,0))
+
+#define subgroups/dummies
+renters.conjoint<-subset(conjoint4, own==0)
+owners.conjoint<-subset(conjoint4, own==1)
+
+#define affordability levels
+renters_aff<-subset(renters.conjoint, aff_housing==1)
+renters_lux<-subset(renters.conjoint, aff_housing==0)
+
+owners_aff<-subset(owners.conjoint, aff_housing==1)
+owners_lux<-subset(owners.conjoint, aff_housing==0)
+
+```
+
+```{r Read Data SF, include = FALSE}
+
+# Read in Data
+
+final<-read.csv("data/sfDataAPSR.csv", stringsAsFactors = F)
+
+owners.sf<-subset(final, ownership_dummy==1)
+renters.sf<-subset(final, ownership_dummy==0)
+
+# Experiment randomization
+
+control<-subset(final, version==5 | version==6)
+control_owners<-subset(control, ownership_dummy==1)
+control_renters<-subset(control, ownership_dummy==0)
+
+control_owners_yes<-subset(control_owners, ten_plan_dummy==1)
+control_owners_no<-subset(control_owners, ten_plan_dummy==0)
+
+control_renters_yes<-subset(control_renters, ten_plan_dummy==1)
+control_renters_no<-subset(control_renters, ten_plan_dummy==0)
+
+```
+
+## Table A.3 Extension Policy Proposals, San Francisco Sample Logistic
+
+```{r Table A.3 Extension Code, include = FALSE, cache = TRUE, results = 'asis'}
+
+# Table A.3: Policy Proposals, SF
+
+# Run Regressions
+
+simple_control<-(glm(ten_plan_dummy ~ ownership_dummy, final, family = "binomial")); summary(simple_control)
+
+simple_control_se<-sqrt(diag(vcovHC(simple_control, type="HC1")))
+
+full_control<-(glm(ten_plan_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , control, family = "binomial")); summary(full_control)
+full_control_se<-sqrt(diag(vcovHC(full_control, type="HC1")))
+
+#Supplementary Data
+stargazer(simple_control, full_control, title="Ten Percent Supply Increase, San Francisco",  label="ten_pct_dummy", 
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se), no.space=T, omit=c("name"))
+
+
+#model ban
+simple_prop_i_ban<-(glm(prop_i_ban_dummy ~ ownership_dummy  , final, family = "binomial")); summary(simple_prop_i_ban)
+simple_prop_i_ban_se<-sqrt(diag(vcovHC(simple_prop_i_ban, type="HC1")))
+
+full_prop_i_ban<-(glm(prop_i_ban_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , final, family = "binomial")); summary(full_prop_i_ban)
+full_prop_i_ban_se<-sqrt(diag(vcovHC(full_prop_i_ban, type="HC1")))
+
+#Table. Ban support
+stargazer(simple_prop_i_ban, full_prop_i_ban, title="Neighborhood Ban, San Francisco",  label="prop_i_ban_dummy",
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T, omit=c("name"))
+```
+
+```{r Figure A.3 extension print, echo = FALSE, results = 'asis'}
+# Table. Combine these two tables
+
+stargazer(simple_control, full_control, simple_prop_i_ban, full_prop_i_ban, title="Policy Proposals, San Francisco Sample",  label="sf_policies",
+          dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("10 Pct Supply", "NIMBY Ban Proposal" ), column.separate = c(2, 2),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T, type="latex",
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se, simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T, table.placement = "H" )
+
+
+```
+
+## Extension of table B.2. Support for 10% Supply Increase
+
+```{r extension Table B.2, cache = TRUE, echo = FALSE, results = 'asis'}
+
+# Table B.2 Support for 10% Supply Increase
+
+# Run Regressionss
+
+# Bivariate
+
+supply_simple<-(glm(supply_dummy ~ own, socpoc, family = "binomial"))
+supply_simple_se<-sqrt(diag(vcovHC(supply_simple, type="HC1")))
+
+# Full
+
+supply_full<-(glm(supply_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc), family = "binomial"))
+supply_full_se<-sqrt(diag(vcovHC(supply_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_full_fe<-(glm(supply_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc, family = "binomial"))
+supply_full_fe_se<-sqrt(diag(vcovHC(supply_full_fe, type="HC1")))
+
+# Create Regression Table
+
+stargazer(supply_simple,  supply_full , supply_full_fe, title="Support for 10 Percent Supply Increase", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_simple_se, supply_full_se, supply_full_fe_se), no.space=T,omit=c("name"), table.placement = "H" )
+
+```
+
+## Extension of table B.3 Support for 10% Supply Increase—Seven-Point Scale
+
+```{r extension Table B.3, eval = FALSE, include = FALSE, results = 'asis'}
+
+# Table B.3. Support for 10 Percent Supply Increase - 7 Point Scale 
+
+# Load MASS packages
+
+library(MASS)
+
+# Factor the response variable
+
+socpoc$city_supply1 = as.factor(socpoc$city_supply)
+
+# Run Regressions
+
+# Bivariate
+
+supply_7_simple<-(polr(city_supply1 ~ own, socpoc))
+supply_7_simple_se<-sqrt(diag(vcov(supply_7_simple, type="HC1")))
+
+# Full
+
+supply_7_full<-(polr(city_supply1 ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc)))
+supply_7_full_se<-sqrt(diag(vcov(supply_7_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_7_full_fe<-(polr(city_supply1 ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+supply_7_full_fe_se<-sqrt(diag(vcov(supply_7_full_fe, type="HC1")))
+
+# Create Table
+
+stargazer(supply_7_simple,  supply_7_full , supply_7_full_fe, title="Support for 10 Percent Supply Increase - 7 Point Scale", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_7_simple_se, supply_7_full_se, supply_7_full_fe_se), no.space=T,omit=c("name"), table.placement = "H" )
+
+```
+
+## Extension of table B.4 Support for Ban on Neighborhood Development
+
+```{r extension Table B.4, echo = FALSE, cache = TRUE, results = 'asis'}
+
+# Table B.4. Support for Neighborhood Ban ####
+
+# bivariate
+ban_simple<-(glm(ban_dummy ~ own, socpoc, family = "binomial"))
+ban_simple_se<-sqrt(diag(vcovHC(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(glm(ban_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc, family = "binomial"))
+ban_full_se<-sqrt(diag(vcovHC(ban_full, type="HC1")))
+
+#full w/ fixed effects
+ban_full_fe<-(glm(ban_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc, family = "binomial"))
+ban_full_fe_se<-sqrt(diag(vcovHC(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development", label="ban_dummy",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+
+```
+
+## Extension of table B.5 Support for Ban on Neighborhood Development—Seven-Point Scale
+
+```{r extension Table B.5, cache = TRUE, include = FALSE, eval = FALSE, results = 'asis'}
+
+# Table B.5. Support for Neighborhood Ban 7 point scale ####
+
+# Factor the response variable
+
+socpoc$neighborhood_ban1 = as.factor(socpoc$neighborhood_ban)
+
+# Run Regressions
+
+#simple
+
+ban_simple<-(polr(neighborhood_ban1 ~ own, socpoc))
+ban_simple_se<-sqrt(diag(vcov(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(polr(neighborhood_ban1 ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc))
+ban_full_se<-sqrt(diag(vcov(ban_full, type="HC1")))
+
+#full w/ fixed effects
+
+ban_full_fe<-(polr(neighborhood_ban1 ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+ban_full_fe_se<-sqrt(diag(vcov(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development - 7 Point Scale", label="neighborhood_ban_7",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+```
+
+# Replication Results
+
+
+### Figure 1. Support for a Neighborhood Ban on New Development by Support for a 10% Increase in the City’s Housing Supply
+
+```{r Figure 1, echo = FALSE}
+
+support<-c(.37, .50, .52, .81)
+Tenant<-c("Homeowners", "Homeowners", "Renters", "Renters")
+supply<-c("Pro-Supply", "Anti-Supply","Pro-Supply","Anti-Supply")
+supply<-factor(supply, levels=c("Pro-Supply", "Anti-Supply"))
+
+ban_plot<-data.frame(Tenant, support, supply)
+
+exitpoll_ban<-ggplot(data=ban_plot, aes(x=Tenant, y=support, fill=Tenant))+
+  geom_bar(colour="black",stat="identity", position=position_dodge()) + facet_wrap(~supply) +
+  ylab("Support (Percent)") + theme(legend.position="none") +ggtitle( "Support for Micro-scale Ban by Support for Macro-scale Supply")+
+  theme_bw()+scale_fill_grey()
+
+exitpoll_ban
+```
+
+
+### Figure 3. Effect of Proximity on Homeowners by Affordability of Proposed Housing
+
+```{r Figure 3 code, include = FALSE, cache = TRUE}
+
+# FIGURE 3. Homeowners, Proximity by Affordability ####
+
+
+# Use AMCE to run regressions
+
+owners_luxury_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                        data= owners_lux , cluster=T,  respondent.id = "CaseID")
+owners_affordable_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                            data=owners_aff, cluster=T,  respondent.id = "CaseID")
+owners_luxury_mod_frame<-data.frame(Variable=(summary(owners_luxury_mod)$amce)$Level,
+                                    Coefficient = (summary(owners_luxury_mod)$amce)$Estimate,
+                                    SE=(summary(owners_luxury_mod)$amce)$'Std. Err',
+                                    modelName="Market Rate")
+owners_affordable_mod_frame<-data.frame(Variable=(summary(owners_affordable_mod)$amce)$Level,
+                                        Coefficient = (summary(owners_affordable_mod)$amce)$Estimate,
+                                        SE=(summary(owners_affordable_mod)$amce)$'Std. Err',
+                                        modelName="Affordable")
+ownersPriceFrame<-data.frame(rbind(owners_luxury_mod_frame, owners_affordable_mod_frame))
+ownersPriceFrame<-subset(ownersPriceFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+ownersPriceFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Market Rate", "Affordable"))
+ownersPriceFrame<-data.frame(rbind(ownersPriceFrame,ownersPriceFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+ownersPriceFrame$Variable <- factor(ownersPriceFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+
+# Plot ggplot. 
+
+owners_price_nimby<-ggplot(ownersPriceFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.20, .20))
+owners_price_nimby<-owners_price_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+owners_price_nimby<-owners_price_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                          ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+owners_price_nimby<-owners_price_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                           ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2), fill="WHITE")
+owners_price_nimby<-owners_price_nimby+coord_flip()+labs(y="Change in Probability Building Preferred")
+owners_price_nimby<-owners_price_nimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+owners_price_nimby<-owners_price_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle("Homeowners, Proximity by Affordability") + guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+```
+
+```{r Figure 3 print, echo = FALSE}
+
+print(owners_price_nimby)
+
+```
+
+
+### Figure 4 Effect of Proximity on Renters by Affordability of Proposed Housing
+
+```{r Figure 4, cache = TRUE, echo = FALSE}
+# FIGURE 4. Renters, Proximity by Affordability ####
+renters_luxury_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                         data= renters_lux , cluster=T,  respondent.id = "CaseID")
+renters_affordable_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                             data=renters_aff, cluster=T,  respondent.id = "CaseID")
+renters_luxury_mod_frame<-data.frame(Variable=(summary(renters_luxury_mod)$amce)$Level,
+                                     Coefficient = (summary(renters_luxury_mod)$amce)$Estimate,
+                                     SE=(summary(renters_luxury_mod)$amce)$'Std. Err',
+                                     modelName="Market Rate")
+renters_affordable_mod_frame<-data.frame(Variable=(summary(renters_affordable_mod)$amce)$Level,
+                                         Coefficient = (summary(renters_affordable_mod)$amce)$Estimate,
+                                         SE=(summary(renters_affordable_mod)$amce)$'Std. Err',
+                                         modelName="Affordable")
+rentersPriceFrame<-data.frame(rbind(renters_luxury_mod_frame, renters_affordable_mod_frame))
+rentersPriceFrame<-subset(rentersPriceFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersPriceFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Market Rate", "Affordable"))
+rentersPriceFrame<-data.frame(rbind(rentersPriceFrame,rentersPriceFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersPriceFrame$Variable <- factor(rentersPriceFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+renters_price_nimby<-ggplot(rentersPriceFrame, aes(colour=modelName, shape=modelName)) + scale_y_continuous(limits = c(-.20, .20))
+renters_price_nimby<-renters_price_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_price_nimby<-renters_price_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                            ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_price_nimby<-renters_price_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                             ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                         position=position_dodge(width=1/2), fill="WHITE")
+renters_price_nimby<-renters_price_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred")
+renters_price_nimby<-renters_price_nimby+theme(legend.title=element_blank(), axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+renters_price_nimby<-renters_price_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) +ggtitle("Renters, Proximity by Affordability")+ guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_price_nimby)
+
+```
+
+### Figure 5 Effect of Proximity on Renters by Affordability of Proposed Housing, Grouped by Average Rent Citywide. Displayed Effect is Shift from Two Miles Away (Baseline) to an Eighth of a Mile Away. Quintile Cutpoints for Average Rent by City at $1,217, $1,480, $1,936, and $2,247
+
+```{r Figure 5 code, cache = TRUE, include = FALSE}
+
+# FIGURE 5, Renters, Nimby by Affordability, Quintile City####
+
+quantile(conjoint4$zri_city, probs=seq(0,1,.1), na.rm=T) # define quintiles
+
+zri_city_values<-c(0,1217,1480,1936,2427,7344)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1]&luxury==1), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+est2<-rep(NA, length(zri_city_values))
+se2<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1]&luxury==0), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_city_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"Market Rate"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Affordable"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+modFrame<-data.frame(rbind(mod1,mod2))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive", "2nd","3rd", "4th", "Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("Market Rate","Affordable"))
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_type_nimby<-renters_type_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+#+scale_color_manual(values=c('#F8766D', '#00BFC4'))
+
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Average Rent by City (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(legend.title=element_blank()) + theme(aspect.ratio = .5)
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ ggtitle("Renters, Proximity by Affordability and Average Rent by City") +guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+```
+
+```{r Print Figure 5, echo = FALSE}
+print(renters_type_nimby)
+```
+
+### Figure 6. Renter Support for a 10% Increase in Their City/Town’s Housing Supply, by Average Rent Citywide
+
+```{r Figure 6, include = FALSE, cache=TRUE}
+
+quantile(socpoc$zri_city, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1217,1480,1936,2427,7344)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+
+for(i in 1:5){
+  section<-subset(renters.socpoc, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1])
+  est1[i]<-mean(section$supply_dummy,na.rm=T)
+  se1[i]<-sqrt((est1[i]*(1-est1[i]))/nrow(section))
+}
+
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+mod1estimates<-mod1ests[1:5,]
+colnames(mod1estimates)<-c("Rent","Estimate", "StdErr", "UpperCI", "LowerCI")
+mod1estimates$Quintile<-c(1,2,3,4,5)
+mod1estimates
+mod1estimates$Cost<-factor(c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+levels(mod1estimates$Cost)
+pd <- position_dodge(0.1)
+mod1estimates$Cost <- factor(mod1estimates$Cost, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+mod1estimates
+renter_city_supply<-ggplot(mod1estimates, aes(x=Cost, y=Estimate))+scale_y_continuous(limits = c(0, 1))+coord_flip()+
+  geom_errorbar(aes(ymin=LowerCI, ymax=UpperCI), width=.1, position=pd) +
+  geom_point(position=pd)+  labs(x = "Average City Rent (Quintiles)", y="Support for Supply (%)")+ggtitle("Renters Support for Supply Citywide, by Average Rent") + theme(aspect.ratio = .5)+
+  theme_bw()+scale_fill_grey()
+
+```
+```{r Print Figure 6, echo = FALSE}
+print(renter_city_supply)
+```
+
+### Figure 7. FIGURE 7. Effect of Proximity on Renters Toward Market-Rate Housing by Attitude Toward Housing Prices Citywide
+
+```{r Figure 7 Code, include = FALSE, cache = TRUE}
+
+# FIGURE 7, Renters, nimby by price anxiety ####
+
+renters_city_low_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                           data=subset(renters_lux, city_interest<0) , cluster=T,  respondent.id = "CaseID")
+renters_city_high_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                            data=subset(renters_lux, city_interest>=0), cluster=T,  respondent.id = "CaseID")
+renters_city_low_mod_frame<-data.frame(Variable=(summary(renters_city_low_mod)$amce)$Level,
+                                       Coefficient = (summary(renters_city_low_mod)$amce)$Estimate,
+                                       SE=(summary(renters_city_low_mod)$amce)$'Std. Err',
+                                       modelName="Price Anxious")
+renters_city_high_mod_frame<-data.frame(Variable=(summary(renters_city_high_mod)$amce)$Level,
+                                        Coefficient = (summary(renters_city_high_mod)$amce)$Estimate,
+                                        SE=(summary(renters_city_high_mod)$amce)$'Std. Err',
+                                        modelName="Price Neutral")
+rentersCityFrame<-data.frame(rbind(renters_city_low_mod_frame, renters_city_high_mod_frame))
+rentersCityFrame<-subset(rentersCityFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersCityFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Price Anxious", "Price Neutral"))
+rentersCityFrame<-data.frame(rbind(rentersCityFrame,rentersCityFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersCityFrame$Variable <- factor(rentersCityFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+renters_anxious_nimby<-ggplot(rentersCityFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_anxious_nimby<-renters_anxious_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)+scale_shape_manual(values=c(4,5))
+#+ scale_color_manual(values=c('#990099','#33CC00'))
+renters_anxious_nimby<-renters_anxious_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                                ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_anxious_nimby<-renters_anxious_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                                 ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                             position=position_dodge(width=1/2), fill="WHITE")
+renters_anxious_nimby<-renters_anxious_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred")
+renters_anxious_nimby<-renters_anxious_nimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+theme(aspect.ratio = .5)
+renters_anxious_nimby<-renters_anxious_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Renters, Proximity by Price Anxiety (Market Rate)")+ theme(aspect.ratio = .5)+ guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+```
+
+```{r Figure 7 print, echo = FALSE}
+
+print(renters_anxious_nimby)
+
+```
+
+## A San Francisco
+
+### Table A.3. Policy Proposals, San Francisco Sample
+
+```{r Table A.3 Code, include = FALSE, cache = TRUE, results = 'asis'}
+
+# Table A.3: Policy Proposals, SF
+
+# Run Regressions
+
+simple_control<-(lm(ten_plan_dummy ~ ownership_dummy, final)); summary(simple_control)
+
+simple_control_se<-sqrt(diag(vcovHC(simple_control, type="HC1")))
+
+full_control<-(lm(ten_plan_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , control)); summary(full_control)
+full_control_se<-sqrt(diag(vcovHC(full_control, type="HC1")))
+
+#Supplementary Data
+stargazer(simple_control, full_control, title="Ten Percent Supply Increase, San Francisco",  label="ten_pct_dummy", 
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se), no.space=T, omit=c("name"))
+
+
+#model ban
+simple_prop_i_ban<-(lm(prop_i_ban_dummy ~ ownership_dummy  , final)); summary(simple_prop_i_ban)
+simple_prop_i_ban_se<-sqrt(diag(vcovHC(simple_prop_i_ban, type="HC1")))
+
+full_prop_i_ban<-(lm(prop_i_ban_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , final)); summary(full_prop_i_ban)
+full_prop_i_ban_se<-sqrt(diag(vcovHC(full_prop_i_ban, type="HC1")))
+
+#Table. Ban support
+stargazer(simple_prop_i_ban, full_prop_i_ban, title="Neighborhood Ban, San Francisco",  label="prop_i_ban_dummy",
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T, omit=c("name"))
+```
+
+```{r Figure A.3 print, echo = FALSE, results = 'asis'}
+# Table. Combine these two tables
+
+stargazer(simple_control, full_control, simple_prop_i_ban, full_prop_i_ban, title="Policy Proposals, San Francisco Sample",  label="sf_policies",
+          dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("10 Pct Supply", "NIMBY Ban Proposal" ), column.separate = c(2, 2),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T, type="latex",
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se, simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T , table.placement = "H" )
+
+
+```
+
+### Figure A.1.  Effect of Proximity on Recontacted San Francisco Renters Toward Market-Rate Housing by Support for Hypothetical Ban on Market-Rate Housing in own Neighborhood
+
+```{r Figure A.1 Code, include = FALSE, cache = TRUE}
+conjoint_sf<-read.csv("data/conjointSFAPSR.csv")
+
+conjoint_sf$distance <- factor(conjoint_sf$distance,levels= c("2 miles (40 minute walk)", "1 mile (20 minute walk)", "1/2 mile (10 minute walk)",
+                                                              "1/8 mile (2 minute walk)"))
+conjoint_sf$community <- factor(conjoint_sf$community,levels= c("No opinion", "Support the building", "Oppose the building"))
+conjoint_sf$affordable <- factor(conjoint_sf$affordable,levels= c("None of the units", "One-quarter of the units", "Half of the units", "All of the units"))
+conjoint_sf$height <- factor(conjoint_sf$height,levels= c("2 stories", "3 stories", "6 stories", "12 stories"))
+conjoint_sf$site <- factor(conjoint_sf$site, levels=c("Empty building","Parking lot","Open field","Historically-designated building"))
+
+#add indicators 
+conjoint_sf$city_interest_low<-as.factor(ifelse(conjoint_sf$city_interest<0,1,0))
+conjoint_sf$prop_i_ban_dummy<-as.factor(ifelse(conjoint_sf$prop_i_ban_dummy==1,1,0))
+conjoint_sf$luxury<-as.factor(ifelse(conjoint_sf$affordable=="None of the units",1,0))
+
+#subgroups
+owners<-subset(conjoint_sf, own==1)
+renters<-subset(conjoint_sf, own==0)
+
+owners_aff<-subset(owners, luxury==0)
+owners_lux<-subset(owners, luxury==1)
+
+renters_aff<-subset(renters, luxury==0)
+renters_lux<-subset(renters, luxury==1)
+
+# Figure A.1. Recontacted Conjoint San Francisco Sample ####
+renters_prop_i_yes_mod<-amce(selected ~ distance  + community + height + site + tenant + units,
+                             data=subset(renters_lux, prop_i_ban_dummy==1&supply_dummy==1),cluster=T,  respondent.id = "respondent")
+renters_prop_i_no_mod<-amce(selected ~ distance  + community + height + site + tenant + units,
+                            data=subset(renters_lux, prop_i_ban_dummy==0&supply_dummy==1), cluster=T,  respondent.id = "respondent")
+renters_prop_i_yes_mod_frame<-data.frame(Variable=(summary(renters_prop_i_yes_mod)$amce)$Level,
+                                         Coefficient = (summary(renters_prop_i_yes_mod)$amce)$Estimate,
+                                         SE=(summary(renters_prop_i_yes_mod)$amce)$'Std. Err',
+                                         modelName="Supporters")
+renters_prop_i_no_mod_frame<-data.frame(Variable=(summary(renters_prop_i_no_mod)$amce)$Level,
+                                        Coefficient = (summary(renters_prop_i_no_mod)$amce)$Estimate,
+                                        SE=(summary(renters_prop_i_no_mod)$amce)$'Std. Err',
+                                        modelName="Opponents")
+rentersPropIFrame<-data.frame(rbind(renters_prop_i_yes_mod_frame, renters_prop_i_no_mod_frame))
+rentersPropIFrame<-subset(rentersPropIFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersPropIFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Supporters", "Opponents"))
+rentersPropIFrame<-data.frame(rbind(rentersPropIFrame,rentersPropIFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersPropIFrame$Variable <- factor(rentersPropIFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+rentersPropIFrame
+rentersPropINimby<-ggplot(rentersPropIFrame, aes(colour=modelName, shape=modelName))+scale_shape_manual(values=c(4,5))
+#+  scale_color_manual(values=c('#FF9933','#3399FF'))
+rentersPropINimby<-rentersPropINimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+rentersPropINimby<-rentersPropINimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                        ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+rentersPropINimby<-rentersPropINimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                         ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                     position=position_dodge(width=1/2), fill="WHITE")
+rentersPropINimby<-rentersPropINimby+coord_flip()+labs(y="Change in Probability Building Preferred")
+rentersPropINimby<-rentersPropINimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+rentersPropINimby<-rentersPropINimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Renters, Proximity and Ban Support (Market Rate)") + guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+```
+
+```{r Figure A.1 print, echo = FALSE}
+
+print(rentersPropINimby)
+
+```
+
+## NATIONAL SURVEY NON-CONJOINT
+
+### Table B.2. Support for 10% Supply Increase
+
+```{r Table B.2, cache = TRUE, echo = FALSE, results = 'asis'}
+
+# Table B.2 Support for 10% Supply Increase
+
+# Run Regressionss
+
+# Bivariate
+
+supply_simple<-(lm(supply_dummy ~ own, socpoc))
+supply_simple_se<-sqrt(diag(vcovHC(supply_simple, type="HC1")))
+
+# Full
+
+supply_full<-(lm(supply_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc)))
+supply_full_se<-sqrt(diag(vcovHC(supply_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_full_fe<-(lm(supply_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+supply_full_fe_se<-sqrt(diag(vcovHC(supply_full_fe, type="HC1")))
+
+# Create Regression Table
+
+stargazer(supply_simple,  supply_full , supply_full_fe, title="Support for 10 Percent Supply Increase", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_simple_se, supply_full_se, supply_full_fe_se), no.space=T,omit=c("name"), table.placement = "H" )
+
+```
+
+### Table B.3. Support for 10% Supply Increase—Seven-Point Scale
+
+```{r Table B.3, cache = TRUE, echo = FALSE, results = 'asis'}
+
+# Table B.3. Support for 10 Percent Supply Increase - 7 Point Scale ####
+
+# Run Regressions
+
+# Bivariate
+
+supply_7_simple<-(lm(city_supply ~ own, socpoc))
+supply_7_simple_se<-sqrt(diag(vcovHC(supply_7_simple, type="HC1")))
+
+# Full
+
+supply_7_full<-(lm(city_supply ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc)))
+supply_7_full_se<-sqrt(diag(vcovHC(supply_7_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_7_full_fe<-(lm(city_supply ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+supply_7_full_fe_se<-sqrt(diag(vcovHC(supply_7_full_fe, type="HC1")))
+
+# Create Table
+
+stargazer(supply_7_simple,  supply_7_full , supply_7_full_fe, title="Support for 10 Percent Supply Increase - 7 Point Scale", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_7_simple_se, supply_7_full_se, supply_7_full_fe_se), no.space=T,omit=c("name"), table.placement = "H")
+
+```
+
+### Table B.4. Support for Ban on Neighborhood Development
+
+```{r Table B.4, echo = FALSE, cache = TRUE, results = 'asis'}
+
+# Table B.4. Support for Neighborhood Ban ####
+
+# bivariate
+ban_simple<-(lm(ban_dummy ~ own, socpoc))
+ban_simple_se<-sqrt(diag(vcovHC(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(lm(ban_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc))
+ban_full_se<-sqrt(diag(vcovHC(ban_full, type="HC1")))
+
+#full w/ fixed effects
+ban_full_fe<-(lm(ban_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+ban_full_fe_se<-sqrt(diag(vcovHC(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development", label="ban_dummy",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+
+```
+
+### Table B.5. Support for Ban on Neighborhood Development—Seven-Point Scale
+
+```{r Table B.5, cache = TRUE, echo = FALSE, results = 'asis'}
+
+# Table B.5. Support for Neighborhood Ban 7 point scale ####
+
+#simple
+
+ban_simple<-(lm(neighborhood_ban ~ own, socpoc))
+ban_simple_se<-sqrt(diag(vcovHC(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(lm(neighborhood_ban ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc))
+ban_full_se<-sqrt(diag(vcovHC(ban_full, type="HC1")))
+
+#full w/ fixed effects
+
+ban_full_fe<-(lm(neighborhood_ban ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+ban_full_fe_se<-sqrt(diag(vcovHC(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development - 7 Point Scale", label="neighborhood_ban_7",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+```
+
+
+
+
+
+## C Conjoint Results
+
+### Figure C.1. Homeowner Spatial Sensitivity by Household Income. Above Median Income above $80,000, Below Median Income less than or equal to $80,000
+
+```{r Figure C.1 code, include = FALSE, cache = TRUE}
+
+# Figure C.1. Homeowner Proximity by Income ####
+
+summary(owners$income) #median==80,000
+owners_liberal<-amce(select ~ distance + affordable + community + height + site + tenant + units,
+                     data=subset(owners.conjoint, income>80000), cluster=T,  respondent.id = "CaseID")
+owners_conservatives<-amce(select ~ distance + affordable + community + height + site + tenant + units,
+                           data=subset(owners.conjoint, income<=80000), cluster=T,  respondent.id = "CaseID")
+owners_liberal_frame<-data.frame(Variable=(summary(owners_liberal)$amce)$Level,
+                                 Coefficient = (summary(owners_liberal)$amce)$Estimate,
+                                 SE=(summary(owners_liberal)$amce)$'Std. Err',
+                                 modelName="Below Median Income")
+owners_liberal_frame
+owners_conservatives_frame<-data.frame(Variable=(summary(owners_conservatives)$amce)$Level,
+                                       Coefficient = (summary(owners_conservatives)$amce)$Estimate,
+                                       SE=(summary(owners_conservatives)$amce)$'Std. Err',
+                                       modelName="Above Median Income")
+ideologyFrame<-data.frame(rbind(owners_liberal_frame, owners_conservatives_frame))
+ideologyFrame<-subset(ideologyFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+ideologyFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Below Median Income", "Above Median Income"))
+ideologyFrame<-data.frame(rbind(ideologyFrame,ideologyFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+ideologyFrame$Variable <- factor(ideologyFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+ideology_affordable<-ggplot(ideologyFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+ideology_affordable<-ideology_affordable+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+ideology_affordable<-ideology_affordable+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                            ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+ideology_affordable<-ideology_affordable+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                             ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                         position=position_dodge(width=1/2),  fill="WHITE")
+ideology_affordable<-ideology_affordable+coord_flip()+ labs(y="Change in Probability Building Preferred")
+ideology_affordable<-ideology_affordable+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+ideology_affordable<-ideology_affordable+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle("Homeowners, Proximity by Income")+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+```
+
+```{r Figure C.1 print, echo = FALSE}
+
+print(ideology_affordable)
+
+```
+
+### Figure C.2. Homeowner Spatial Sensitivity by Ideology
+
+```{r Figure C.2 code, include = FALSE, cache = TRUE}
+
+# Figure C.2 Homeowner Proximity by Ideology ####
+
+# Redefine data-sets
+
+renters_aff<-subset(renters.conjoint, aff_housing==1)
+renters_lux<-subset(renters.conjoint, aff_housing==0)
+
+owners_aff<-subset(owners.conjoint, aff_housing==1)
+owners_lux<-subset(owners.conjoint, aff_housing==0)
+
+# Run the regression 
+
+owners_liberal<-amce(select ~ distance + affordable  + community + height + site + tenant + units,
+                     data=subset(owners_aff, ideology>4), cluster=T,  respondent.id = "CaseID")
+owners_conservatives<-amce(select ~ distance + affordable  + community + height + site + tenant + units,
+                           data=subset(owners_aff, ideology<4), cluster=T,  respondent.id = "CaseID")
+owners_liberal_frame<-data.frame(Variable=(summary(owners_liberal)$amce)$Level,
+                                 Coefficient = (summary(owners_liberal)$amce)$Estimate,
+                                 SE=(summary(owners_liberal)$amce)$'Std. Err',
+                                 modelName="Liberals")
+owners_liberal_frame
+owners_conservatives_frame<-data.frame(Variable=(summary(owners_conservatives)$amce)$Level,
+                                       Coefficient = (summary(owners_conservatives)$amce)$Estimate,
+                                       SE=(summary(owners_conservatives)$amce)$'Std. Err',
+                                       modelName="Conservatives")
+ideologyFrame<-data.frame(rbind( owners_conservatives_frame,owners_liberal_frame))
+ideologyFrame<-subset(ideologyFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+ideologyFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c( "Conservatives", "Liberals"))
+ideologyFrame<-data.frame(rbind(ideologyFrame,ideologyFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+ideologyFrame$Variable <- factor(ideologyFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+ideology_affordable<-ggplot(ideologyFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+ideology_affordable<-ideology_affordable+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+ideology_affordable<-ideology_affordable+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                            ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+ideology_affordable<-ideology_affordable+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                             ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                         position=position_dodge(width=1/2),  fill="WHITE")
+ideology_affordable<-ideology_affordable+coord_flip()+ labs(y="Change in Probability Building Preferred")
+ideology_affordable<-ideology_affordable+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+ideology_affordable<-ideology_affordable+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle("Homeowners, Proximity by Ideology")+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+```
+
+```{r Figure C2 print, echo = FALSE}
+
+print(ideology_affordable)
+
+```
+
+### Figure C.3. Effect of an Eighth-Mile Away Compared to Baseline of Two Miles Away for Each Level of Affordability, by Homeownership Status
+
+```{r Figure C.3 code, cache = TRUE, include = FALSE}
+
+# Figure C.3 Proximity by Affordability Homeowners and Renters ####
+
+affordable_values<-c("None of the units", "One-quarter of the units", "Half of the units", "All of the units")
+est1<-rep(NA, length(affordable_values))
+se1<-rep(NA, length(affordable_values))
+for(i in 1:4){
+  mod1<-amce(select ~ distance + community + height + site + tenant + units,
+             data=subset(owners.conjoint, affordable==affordable_values[i]), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(affordable_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+est2<-rep(NA, length(affordable_values))
+se2<-rep(NA, length(affordable_values))
+for(i in 1:4){
+  mod2<-amce(select ~ distance + community + height + site + tenant + units,
+             data=subset(renters.conjoint, affordable==affordable_values[i]), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(affordable_values,est2,se2))
+mod2ests$uCI<-est1+se1*1.96
+mod2ests$lCI<-est1-se1*1.96
+mod2ests
+#combine data
+
+mod1<-mod1ests
+class(mod1$est)
+mod1$quintle<-c("None of the units", "One-quarter of the units", "Half of the units", "All of the units")
+mod1$modelName<-"Homeowners"
+names(mod1)<-c("affordability","est","se","uci","lci","Quintile","modelName")
+mod2<-mod2ests
+mod2$quintle<-c("None of the units", "One-quarter of the units", "Half of the units", "All of the units")
+mod2$modelName<-"Renters"
+names(mod2)<-c("affordability","est","se","uci","lci","Quintile","modelName")
+modFrame<-data.frame(rbind(mod1,mod2))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("None of the units", "One-quarter of the units", "Half of the units", "All of the units"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame$est<-as.numeric(as.character(modFrame$est))
+modFrame$se<-as.numeric(as.character(modFrame$se))
+
+modFrame$modelName<-factor(modFrame$modelName, levels=c("Homeowners","Renters"))
+modFrame
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.2, .2))
+renters_type_nimby<-renters_type_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Affordability Level")
+renters_type_nimby<-renters_type_nimby+theme(legend.title=element_blank())+ theme(aspect.ratio = .5)
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Proximity by Affordability") + guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+```
+
+```{r Figure C.3 print, echo = FALSE}
+
+print(renters_type_nimby)
+
+```
+
+### Figure C.4. Renter Spatial Sensitivity toward all Affordability Levels, by Citywide Average Rent
+
+```{r Figure C.4 code, include = FALSE, cache = TRUE}
+
+# Figure C.4 Renters Proximity by each level of affordability, by City ####
+
+quantile(conjoint4$zri_city, probs=seq(0,1,.2), na.rm=T)
+
+zri_values<-c(0,1217,1480,1936,2427,7500)
+est1<-rep(NA, length(zri_values))
+se1<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="None of the units"), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+est2<-rep(NA, length(zri_values))
+se2<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="One-quarter of the units"), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+
+est3<-rep(NA, length(zri_values))
+se3<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod3<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="Half of the units"), cluster=T, respondent.id = "CaseID")
+  est3[i]<-summary(mod3)$amce[5,3]
+  se3[i]<-summary(mod3)$amce[5,4]
+}
+mod3ests<-as.data.frame(cbind(zri_values,est3,se3))
+mod3ests$uCI<-est3+se3*1.96
+mod3ests$lCI<-est3-se3*1.96
+
+est4<-rep(NA, length(zri_values))
+se4<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod4<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="All of the units"), cluster=T, respondent.id = "CaseID")
+  est4[i]<-summary(mod4)$amce[5,3]
+  se4[i]<-summary(mod4)$amce[5,4]
+}
+mod4ests<-as.data.frame(cbind(zri_values,est4,se4))
+mod4ests$uCI<-est4+se4*1.96
+mod4ests$lCI<-est4-se4*1.96
+
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"None of Units"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Quarter of Units"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod3<-mod3ests[-6,]
+mod3$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod3$modelName<-"Half of Units"
+names(mod3)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod4<-mod4ests[-6,]
+mod4$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod4$modelName<-"All of Units"
+names(mod4)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+modFrame<-data.frame(rbind(mod1,mod2,mod3,mod4))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("None of Units","Quarter of Units","Half of Units","All of Units"))
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.3, .3))#+ scale_colour_discrete(name="Affordability") +scale_shape_discrete(name="Affordability")
+renters_type_nimby<-renters_type_nimby+theme_bw()+theme(legend.title = element_blank())+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Average City Rent (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle(("Renters, Proximity by Affordability and Average Rent by City"))+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+```
+
+```{r Figure C.4 print, echo = FALSE}
+
+print(renters_type_nimby)
+```
+
+### Figure C.5. Renter Spatial Sensitivity toward Affordability Levels, by ZIP Code Average Rent
+
+```{r Figure C.5, include = FALSE, cache = TRUE}
+
+# Figure C.5 Renters Proximity by Affordability and Average Rent by ZIP ####
+
+quantile(conjoint4$zri, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1204,1526,1959,2488,13000)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri>zri_city_values[i] & zri<=zri_city_values[i+1]&luxury==1), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+est2<-rep(NA, length(zri_city_values))
+se2<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri>zri_city_values[i] & zri<=zri_city_values[i+1]&luxury==0), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_city_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"Market Rate"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Affordable"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+modFrame<-data.frame(rbind(mod1,mod2))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive", "2nd","3rd", "4th", "Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("Market Rate","Affordable"))
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_type_nimby<-renters_type_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Average ZIP Rent (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(legend.title=element_blank()) + theme(aspect.ratio = .5)
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ ggtitle("Renters, Proximity by Affordability and Average Rent by ZIP") +guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+```
+
+```{r Figure C.5 print, echo = FALSE}
+
+print(renters_type_nimby)
+
+```
+
+### Figure C.6. Homeowner Spatial Sensitivity to all Affordability Levels, by Citywide Average Rent
+
+```{r Figure C.6 code, include = FALSE, cache = TRUE}
+
+# Figure C.6 Homeowners Proximity by each level of affordability, by City ####
+
+quantile(conjoint4$zri_city, probs=seq(0,1,.2), na.rm=T)
+zri_values<-c(0,1217,1480,1936,2427,7500)
+est1<-rep(NA, length(zri_values))
+se1<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="None of the units"), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+
+est2<-rep(NA, length(zri_values))
+se2<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="One-quarter of the units"), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+
+est3<-rep(NA, length(zri_values))
+se3<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod3<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="Half of the units"), cluster=T, respondent.id = "CaseID")
+  est3[i]<-summary(mod3)$amce[5,3]
+  se3[i]<-summary(mod3)$amce[5,4]
+}
+mod3ests<-as.data.frame(cbind(zri_values,est3,se3))
+mod3ests$uCI<-est3+se3*1.96
+mod3ests$lCI<-est3-se3*1.96
+
+est4<-rep(NA, length(zri_values))
+se4<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod4<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="All of the units"), cluster=T, respondent.id = "CaseID")
+  est4[i]<-summary(mod4)$amce[5,3]
+  se4[i]<-summary(mod4)$amce[5,4]
+}
+mod4ests<-as.data.frame(cbind(zri_values,est4,se4))
+mod4ests$uCI<-est4+se4*1.96
+mod4ests$lCI<-est4-se4*1.96
+
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"None of Units"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Quarter of Units"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod3<-mod3ests[-6,]
+mod3$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod3$modelName<-"Half of Units"
+names(mod3)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod4<-mod4ests[-6,]
+mod4$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod4$modelName<-"All of Units"
+names(mod4)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+modFrame<-data.frame(rbind(mod1,mod2,mod3,mod4))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("None of Units","Quarter of Units","Half of Units","All of Units"))
+
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.3, .3))#+ scale_colour_discrete(name="Affordability") +scale_shape_discrete(name="Affordability")
+renters_type_nimby<-renters_type_nimby+theme_bw()+theme(legend.title = element_blank())+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes( x=Quintile, ymin=est-se*interval1, 
+                                                           ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred", x="Average Rent by City (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle(("Homeowners, Proximity by Affordability and Average Rent by City"))+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+```
+
+```{r Figure C.6 print, echo = FALSE}
+
+print(renters_type_nimby)
+
+```
+
+### Figure C.7. Renter Spatial Sensitivity toward Affordable Housing, by Price Anxiety. Note Lack of Divergence between “Price Anxious” and “Price Neutral” Compared to Preferences toward Market-Rate Housing (Figure 7)
+
+```{r Figure C.7 code, include = FALSE}
+
+renters_city_low_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                           data=subset(renters_aff, city_interest<0) , cluster=T,  respondent.id = "CaseID")
+renters_city_high_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                            data=subset(renters_aff, city_interest>=0), cluster=T,  respondent.id = "CaseID")
+renters_city_low_mod_frame<-data.frame(Variable=(summary(renters_city_low_mod)$amce)$Level,
+                                       Coefficient = (summary(renters_city_low_mod)$amce)$Estimate,
+                                       SE=(summary(renters_city_low_mod)$amce)$'Std. Err',
+                                       modelName="Price Anxious")
+renters_city_high_mod_frame<-data.frame(Variable=(summary(renters_city_high_mod)$amce)$Level,
+                                        Coefficient = (summary(renters_city_high_mod)$amce)$Estimate,
+                                        SE=(summary(renters_city_high_mod)$amce)$'Std. Err',
+                                        modelName="Price Neutral")
+rentersCityFrame<-data.frame(rbind(renters_city_low_mod_frame, renters_city_high_mod_frame))
+rentersCityFrame<-subset(rentersCityFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersCityFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Price Anxious", "Price Neutral"))
+rentersCityFrame<-data.frame(rbind(rentersCityFrame,rentersCityFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersCityFrame$Variable <- factor(rentersCityFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+renters_anxious_nimby<-ggplot(rentersCityFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_anxious_nimby<-renters_anxious_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)+scale_shape_manual(values=c(4,5))
+#+ scale_color_manual(values=c('#990099','#33CC00'))
+renters_anxious_nimby<-renters_anxious_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                                ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_anxious_nimby<-renters_anxious_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                                 ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                             position=position_dodge(width=1/2), fill="WHITE")
+renters_anxious_nimby<-renters_anxious_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred")
+renters_anxious_nimby<-renters_anxious_nimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+theme(aspect.ratio = .5)
+renters_anxious_nimby<-renters_anxious_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Renters, Proximity by Price Anxiety (Market Rate)")+ theme(aspect.ratio = .5)+ guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+```
+
+
+```{r Figure C.7 print, echo = FALSE}
+
+print(renters_anxious_nimby)
+
+```
+
+### Figure C.8. Renter Support for a 10% Increase in Their City/Town’s Housing Supply, Grouped into Quintiles by ZIP Code Average Rent
+
+```{r Figure C.8, include = FALSE, cache = TRUE}
+
+# Figure C.8. Renters Suppport for Supply Cityiwde, Average ZIP Rent ####
+
+quantile(socpoc$zri, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1204,1526,1958,2488,13000)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+
+for(i in 1:5){
+  section<-subset(renters.socpoc, zri>zri_city_values[i] & zri<=zri_city_values[i+1])
+  est1[i]<-mean(section$supply_dummy,na.rm=T)
+  se1[i]<-sqrt((est1[i]*(1-est1[i]))/nrow(section))
+}
+
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+mod1estimates<-mod1ests[1:5,]
+colnames(mod1estimates)<-c("Rent","Estimate", "StdErr", "UpperCI", "LowerCI")
+mod1estimates$Quintile<-c(1,2,3,4,5)
+mod1estimates
+mod1estimates$Cost<-factor(c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+levels(mod1estimates$Cost)
+pd <- position_dodge(0.1)
+mod1estimates$Cost <- factor(mod1estimates$Cost, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+mod1estimates
+renter_zip_supply<-ggplot(mod1estimates, aes(x=Cost, y=Estimate))+scale_y_continuous(limits = c(0, 1))+coord_flip()+
+  geom_errorbar(aes(ymin=LowerCI, ymax=UpperCI), width=.1, position=pd) +
+  geom_point(position=pd)+  labs(x = "Average ZIP Rent (Quintiles)", y="Support for Supply (%)")+ggtitle("Renters Support for Supply Citywide, by Average ZIP Rent") + theme(aspect.ratio = .5)+
+  theme_bw()+scale_fill_grey()
+
+```
+```{r Figure C.8 print, echo = FALSE}
+print(renter_zip_supply)
+```
+
+### Figure C.9.  Homeowner Support for a 10% Increase in City/Town’s Housing Supply, by Citywide Average Rent
+
+```{r Figure C.9 code, include = FALSE, cache = TRUE}
+# Figure C.9. Homeowners Support for Supply Citywide, Average City Rent ####
+quantile(socpoc$zri_city, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1217,1480,1936,2427,7344)
+
+est2<-rep(NA, length(zri_city_values))
+se2<-rep(NA, length(zri_city_values))
+
+for(i in 1:5){
+  section<-subset(owners.socpoc, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1])
+  est2[i]<-mean(section$supply_dummy,na.rm=T)
+  se2[i]<-sqrt((est2[i]*(1-est2[i]))/nrow(section))
+}
+
+mod2ests<-as.data.frame(cbind(zri_city_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+
+mod2estimates<-mod2ests[1:5,]
+colnames(mod2estimates)<-c("Rent","Estimate", "StdErr", "UpperCI", "LowerCI")
+mod2estimates$Quintile<-c(1,2,3,4,5)
+mod2estimates
+mod2estimates$Cost<-factor(c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+levels(mod2estimates$Cost)
+pd <- position_dodge(0.1)
+mod2estimates$Cost <- factor(mod2estimates$Cost, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+owners_city_supply<-ggplot(mod2estimates, aes(x=Cost, y=Estimate))+scale_y_continuous(limits = c(0, 1))+coord_flip()+
+  geom_errorbar(aes(ymin=LowerCI, ymax=UpperCI), width=.1, position=pd) +
+  geom_point(position=pd)+ggtitle("Homeowners Support for Supply Citywide, by Average Rent")+
+  labs(x = "Average City Rent (Quintiles)", y="Support for Supply (%)")+ theme(aspect.ratio=.5)+
+  theme_bw()+scale_fill_grey()
+
+```
+
+```{r Print Figure C.9, echo = FALSE}
+
+print(owners_city_supply)
+```
+
+# Appendix
+
+```{r all replication and extension code, eval = FALSE}
+socpoc<-read.csv("data/socpocAPSR.csv", stringsAsFactors = F)
+
+#assign ownership groups
+renters.socpoc<-subset(socpoc, own==0)
+owners.socpoc<-subset(socpoc, own==1)
+
+
+conjoint4<-read.csv("data/conjointDataAPSR.csv")
+table(conjoint4$own)
+#relevel
+conjoint4$distance <- factor(conjoint4$distance,levels= c("2 miles (40 minute walk)", "1 mile (20 minute walk)", "1/2 mile (10 minute walk)","1/8 mile (2 minute walk)"))
+conjoint4$community <- factor(conjoint4$community,levels= c("No opinion", "Support the building", "Oppose the building"))
+conjoint4$affordable <- factor(conjoint4$affordable,levels= c("None of the units", "One-quarter of the units", "Half of the units", "All of the units"))
+conjoint4$height <- factor(conjoint4$height,levels= c("2 stories", "3 stories", "6 stories", "12 stories"))
+conjoint4$site <- factor(conjoint4$site, levels=c("Empty building","Parking lot","Open field","Historically-designated building"))
+names(conjoint4)
+#reclassify items as factor
+cols<-c("own", "whitenh", "nearby","conjoint_first","rich", "luxury")
+
+conjoint4[cols] <- data.frame(apply(conjoint4[c(cols)], 2, as.factor))
+
+# dummies
+conjoint4$liberal<-as.factor(ifelse(conjoint4$ideology>4,1,ifelse(conjoint4$ideology<4,0, NA)))
+conjoint4$city_interest_low<-as.factor(ifelse(conjoint4$city_interest<0,1,0))
+
+#define subgroups/dummies
+renters.conjoint<-subset(conjoint4, own==0)
+owners.conjoint<-subset(conjoint4, own==1)
+
+#define affordability levels
+renters_aff<-subset(renters.conjoint, aff_housing==1)
+renters_lux<-subset(renters.conjoint, aff_housing==0)
+
+owners_aff<-subset(owners.conjoint, aff_housing==1)
+owners_lux<-subset(owners.conjoint, aff_housing==0)
+
+
+# Read in Data
+
+final<-read.csv("data/sfDataAPSR.csv", stringsAsFactors = F)
+
+owners.sf<-subset(final, ownership_dummy==1)
+renters.sf<-subset(final, ownership_dummy==0)
+
+# Experiment randomization
+
+control<-subset(final, version==5 | version==6)
+control_owners<-subset(control, ownership_dummy==1)
+control_renters<-subset(control, ownership_dummy==0)
+
+control_owners_yes<-subset(control_owners, ten_plan_dummy==1)
+control_owners_no<-subset(control_owners, ten_plan_dummy==0)
+
+control_renters_yes<-subset(control_renters, ten_plan_dummy==1)
+control_renters_no<-subset(control_renters, ten_plan_dummy==0)
+
+
+# Extension Table A.3: Policy Proposals, SF
+
+# Run Regressions
+
+simple_control<-(glm(ten_plan_dummy ~ ownership_dummy, final, family = "binomial")); summary(simple_control)
+
+simple_control_se<-sqrt(diag(vcovHC(simple_control, type="HC1")))
+
+full_control<-(glm(ten_plan_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , control, family = "binomial")); summary(full_control)
+full_control_se<-sqrt(diag(vcovHC(full_control, type="HC1")))
+
+#Supplementary Data
+stargazer(simple_control, full_control, title="Ten Percent Supply Increase, San Francisco",  label="ten_pct_dummy", 
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se), no.space=T, omit=c("name"))
+
+
+#model ban
+simple_prop_i_ban<-(glm(prop_i_ban_dummy ~ ownership_dummy  , final, family = "binomial")); summary(simple_prop_i_ban)
+simple_prop_i_ban_se<-sqrt(diag(vcovHC(simple_prop_i_ban, type="HC1")))
+
+full_prop_i_ban<-(glm(prop_i_ban_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , final, family = "binomial")); summary(full_prop_i_ban)
+full_prop_i_ban_se<-sqrt(diag(vcovHC(full_prop_i_ban, type="HC1")))
+
+#Table. Ban support
+stargazer(simple_prop_i_ban, full_prop_i_ban, title="Neighborhood Ban, San Francisco",  label="prop_i_ban_dummy",
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T, omit=c("name"))
+
+# Table. Combine these two tables
+
+stargazer(simple_control, full_control, simple_prop_i_ban, full_prop_i_ban, title="Policy Proposals, San Francisco Sample",  label="sf_policies",
+          dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("10 Pct Supply", "NIMBY Ban Proposal" ), column.separate = c(2, 2),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T, type="latex",
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se, simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T, table.placement = "H" )
+
+
+# Extension Table B.2 Support for 10% Supply Increase
+
+# Run Regressionss
+
+# Bivariate
+
+supply_simple<-(glm(supply_dummy ~ own, socpoc, family = "binomial"))
+supply_simple_se<-sqrt(diag(vcovHC(supply_simple, type="HC1")))
+
+# Full
+
+supply_full<-(glm(supply_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc), family = "binomial"))
+supply_full_se<-sqrt(diag(vcovHC(supply_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_full_fe<-(glm(supply_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc, family = "binomial"))
+supply_full_fe_se<-sqrt(diag(vcovHC(supply_full_fe, type="HC1")))
+
+# Create Regression Table
+
+stargazer(supply_simple,  supply_full , supply_full_fe, title="Support for 10 Percent Supply Increase", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_simple_se, supply_full_se, supply_full_fe_se), no.space=T,omit=c("name"), table.placement = "H" )
+
+
+# Extension Table B.3. Support for 10 Percent Supply Increase - 7 Point Scale 
+
+# Load MASS packages
+
+library(MASS)
+
+# Factor the response variable
+
+socpoc$city_supply1 = as.factor(socpoc$city_supply)
+
+# Run Regressions
+
+# Bivariate
+
+supply_7_simple<-(polr(city_supply1 ~ own, socpoc))
+supply_7_simple_se<-sqrt(diag(vcov(supply_7_simple, type="HC1")))
+
+# Full
+
+supply_7_full<-(polr(city_supply1 ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc)))
+supply_7_full_se<-sqrt(diag(vcov(supply_7_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_7_full_fe<-(polr(city_supply1 ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+supply_7_full_fe_se<-sqrt(diag(vcov(supply_7_full_fe, type="HC1")))
+
+# Create Table
+
+stargazer(supply_7_simple,  supply_7_full , supply_7_full_fe, title="Support for 10 Percent Supply Increase - 7 Point Scale", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_7_simple_se, supply_7_full_se, supply_7_full_fe_se), no.space=T,omit=c("name"), table.placement = "H" )
+
+
+# Extension Table B.4. Support for Neighborhood Ban ####
+
+# bivariate
+ban_simple<-(glm(ban_dummy ~ own, socpoc, family = "binomial"))
+ban_simple_se<-sqrt(diag(vcovHC(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(glm(ban_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc, family = "binomial"))
+ban_full_se<-sqrt(diag(vcovHC(ban_full, type="HC1")))
+
+#full w/ fixed effects
+ban_full_fe<-(glm(ban_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc, family = "binomial"))
+ban_full_fe_se<-sqrt(diag(vcovHC(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development", label="ban_dummy",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+
+
+# Extension Table B.5. Support for Neighborhood Ban 7 point scale ####
+
+# Factor the response variable
+
+socpoc$neighborhood_ban1 = as.factor(socpoc$neighborhood_ban)
+
+# Run Regressions
+
+#simple
+
+ban_simple<-(polr(neighborhood_ban1 ~ own, socpoc))
+ban_simple_se<-sqrt(diag(vcov(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(polr(neighborhood_ban1 ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc))
+ban_full_se<-sqrt(diag(vcov(ban_full, type="HC1")))
+
+#full w/ fixed effects
+
+ban_full_fe<-(polr(neighborhood_ban1 ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+ban_full_fe_se<-sqrt(diag(vcov(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development - 7 Point Scale", label="neighborhood_ban_7",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+
+# Replication results begin here
+
+support<-c(.37, .50, .52, .81)
+Tenant<-c("Homeowners", "Homeowners", "Renters", "Renters")
+supply<-c("Pro-Supply", "Anti-Supply","Pro-Supply","Anti-Supply")
+supply<-factor(supply, levels=c("Pro-Supply", "Anti-Supply"))
+
+ban_plot<-data.frame(Tenant, support, supply)
+
+exitpoll_ban<-ggplot(data=ban_plot, aes(x=Tenant, y=support, fill=Tenant))+
+  geom_bar(colour="black",stat="identity", position=position_dodge()) + facet_wrap(~supply) +
+  ylab("Support (Percent)") + theme(legend.position="none") +ggtitle( "Support for Micro-scale Ban by Support for Macro-scale Supply")+
+  theme_bw()+scale_fill_grey()
+
+exitpoll_ban
+
+
+# FIGURE 3. Homeowners, Proximity by Affordability ####
+
+
+# Use AMCE to run regressions
+
+owners_luxury_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                        data= owners_lux , cluster=T,  respondent.id = "CaseID")
+owners_affordable_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                            data=owners_aff, cluster=T,  respondent.id = "CaseID")
+owners_luxury_mod_frame<-data.frame(Variable=(summary(owners_luxury_mod)$amce)$Level,
+                                    Coefficient = (summary(owners_luxury_mod)$amce)$Estimate,
+                                    SE=(summary(owners_luxury_mod)$amce)$'Std. Err',
+                                    modelName="Market Rate")
+owners_affordable_mod_frame<-data.frame(Variable=(summary(owners_affordable_mod)$amce)$Level,
+                                        Coefficient = (summary(owners_affordable_mod)$amce)$Estimate,
+                                        SE=(summary(owners_affordable_mod)$amce)$'Std. Err',
+                                        modelName="Affordable")
+ownersPriceFrame<-data.frame(rbind(owners_luxury_mod_frame, owners_affordable_mod_frame))
+ownersPriceFrame<-subset(ownersPriceFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+ownersPriceFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Market Rate", "Affordable"))
+ownersPriceFrame<-data.frame(rbind(ownersPriceFrame,ownersPriceFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+ownersPriceFrame$Variable <- factor(ownersPriceFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+
+# Plot ggplot. 
+
+owners_price_nimby<-ggplot(ownersPriceFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.20, .20))
+owners_price_nimby<-owners_price_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+owners_price_nimby<-owners_price_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                          ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+owners_price_nimby<-owners_price_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                           ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2), fill="WHITE")
+owners_price_nimby<-owners_price_nimby+coord_flip()+labs(y="Change in Probability Building Preferred")
+owners_price_nimby<-owners_price_nimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+owners_price_nimby<-owners_price_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle("Homeowners, Proximity by Affordability") + guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(owners_price_nimby)
+
+
+# FIGURE 4. Renters, Proximity by Affordability ####
+renters_luxury_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                         data= renters_lux , cluster=T,  respondent.id = "CaseID")
+renters_affordable_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                             data=renters_aff, cluster=T,  respondent.id = "CaseID")
+renters_luxury_mod_frame<-data.frame(Variable=(summary(renters_luxury_mod)$amce)$Level,
+                                     Coefficient = (summary(renters_luxury_mod)$amce)$Estimate,
+                                     SE=(summary(renters_luxury_mod)$amce)$'Std. Err',
+                                     modelName="Market Rate")
+renters_affordable_mod_frame<-data.frame(Variable=(summary(renters_affordable_mod)$amce)$Level,
+                                         Coefficient = (summary(renters_affordable_mod)$amce)$Estimate,
+                                         SE=(summary(renters_affordable_mod)$amce)$'Std. Err',
+                                         modelName="Affordable")
+rentersPriceFrame<-data.frame(rbind(renters_luxury_mod_frame, renters_affordable_mod_frame))
+rentersPriceFrame<-subset(rentersPriceFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersPriceFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Market Rate", "Affordable"))
+rentersPriceFrame<-data.frame(rbind(rentersPriceFrame,rentersPriceFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersPriceFrame$Variable <- factor(rentersPriceFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+renters_price_nimby<-ggplot(rentersPriceFrame, aes(colour=modelName, shape=modelName)) + scale_y_continuous(limits = c(-.20, .20))
+renters_price_nimby<-renters_price_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_price_nimby<-renters_price_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                            ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_price_nimby<-renters_price_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                             ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                         position=position_dodge(width=1/2), fill="WHITE")
+renters_price_nimby<-renters_price_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred")
+renters_price_nimby<-renters_price_nimby+theme(legend.title=element_blank(), axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+renters_price_nimby<-renters_price_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) +ggtitle("Renters, Proximity by Affordability")+ guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_price_nimby)
+
+
+# FIGURE 5, Renters, Nimby by Affordability, Quintile City####
+
+quantile(conjoint4$zri_city, probs=seq(0,1,.1), na.rm=T) # define quintiles
+
+zri_city_values<-c(0,1217,1480,1936,2427,7344)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1]&luxury==1), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+est2<-rep(NA, length(zri_city_values))
+se2<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1]&luxury==0), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_city_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"Market Rate"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Affordable"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+modFrame<-data.frame(rbind(mod1,mod2))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive", "2nd","3rd", "4th", "Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("Market Rate","Affordable"))
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_type_nimby<-renters_type_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+#+scale_color_manual(values=c('#F8766D', '#00BFC4'))
+
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Average Rent by City (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(legend.title=element_blank()) + theme(aspect.ratio = .5)
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ ggtitle("Renters, Proximity by Affordability and Average Rent by City") +guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_type_nimby)
+
+
+quantile(socpoc$zri_city, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1217,1480,1936,2427,7344)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+
+for(i in 1:5){
+  section<-subset(renters.socpoc, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1])
+  est1[i]<-mean(section$supply_dummy,na.rm=T)
+  se1[i]<-sqrt((est1[i]*(1-est1[i]))/nrow(section))
+}
+
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+mod1estimates<-mod1ests[1:5,]
+colnames(mod1estimates)<-c("Rent","Estimate", "StdErr", "UpperCI", "LowerCI")
+mod1estimates$Quintile<-c(1,2,3,4,5)
+mod1estimates
+mod1estimates$Cost<-factor(c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+levels(mod1estimates$Cost)
+pd <- position_dodge(0.1)
+mod1estimates$Cost <- factor(mod1estimates$Cost, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+mod1estimates
+renter_city_supply<-ggplot(mod1estimates, aes(x=Cost, y=Estimate))+scale_y_continuous(limits = c(0, 1))+coord_flip()+
+  geom_errorbar(aes(ymin=LowerCI, ymax=UpperCI), width=.1, position=pd) +
+  geom_point(position=pd)+  labs(x = "Average City Rent (Quintiles)", y="Support for Supply (%)")+ggtitle("Renters Support for Supply Citywide, by Average Rent") + theme(aspect.ratio = .5)+
+  theme_bw()+scale_fill_grey()
+
+
+print(renter_city_supply)
+
+
+# FIGURE 7, Renters, nimby by price anxiety ####
+
+renters_city_low_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                           data=subset(renters_lux, city_interest<0) , cluster=T,  respondent.id = "CaseID")
+renters_city_high_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                            data=subset(renters_lux, city_interest>=0), cluster=T,  respondent.id = "CaseID")
+renters_city_low_mod_frame<-data.frame(Variable=(summary(renters_city_low_mod)$amce)$Level,
+                                       Coefficient = (summary(renters_city_low_mod)$amce)$Estimate,
+                                       SE=(summary(renters_city_low_mod)$amce)$'Std. Err',
+                                       modelName="Price Anxious")
+renters_city_high_mod_frame<-data.frame(Variable=(summary(renters_city_high_mod)$amce)$Level,
+                                        Coefficient = (summary(renters_city_high_mod)$amce)$Estimate,
+                                        SE=(summary(renters_city_high_mod)$amce)$'Std. Err',
+                                        modelName="Price Neutral")
+rentersCityFrame<-data.frame(rbind(renters_city_low_mod_frame, renters_city_high_mod_frame))
+rentersCityFrame<-subset(rentersCityFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersCityFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Price Anxious", "Price Neutral"))
+rentersCityFrame<-data.frame(rbind(rentersCityFrame,rentersCityFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersCityFrame$Variable <- factor(rentersCityFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+renters_anxious_nimby<-ggplot(rentersCityFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_anxious_nimby<-renters_anxious_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)+scale_shape_manual(values=c(4,5))
+#+ scale_color_manual(values=c('#990099','#33CC00'))
+renters_anxious_nimby<-renters_anxious_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                                ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_anxious_nimby<-renters_anxious_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                                 ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                             position=position_dodge(width=1/2), fill="WHITE")
+renters_anxious_nimby<-renters_anxious_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred")
+renters_anxious_nimby<-renters_anxious_nimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+theme(aspect.ratio = .5)
+renters_anxious_nimby<-renters_anxious_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Renters, Proximity by Price Anxiety (Market Rate)")+ theme(aspect.ratio = .5)+ guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_anxious_nimby)
+
+
+# Table A.3: Policy Proposals, SF
+
+# Run Regressions
+
+simple_control<-(lm(ten_plan_dummy ~ ownership_dummy, final)); summary(simple_control)
+
+simple_control_se<-sqrt(diag(vcovHC(simple_control, type="HC1")))
+
+full_control<-(lm(ten_plan_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , control)); summary(full_control)
+full_control_se<-sqrt(diag(vcovHC(full_control, type="HC1")))
+
+#Supplementary Data
+stargazer(simple_control, full_control, title="Ten Percent Supply Increase, San Francisco",  label="ten_pct_dummy", 
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se), no.space=T, omit=c("name"))
+
+
+#model ban
+simple_prop_i_ban<-(lm(prop_i_ban_dummy ~ ownership_dummy  , final)); summary(simple_prop_i_ban)
+simple_prop_i_ban_se<-sqrt(diag(vcovHC(simple_prop_i_ban, type="HC1")))
+
+full_prop_i_ban<-(lm(prop_i_ban_dummy ~ ownership_dummy  +  scale(ideology_num) +scale(income_num) + white_dummy  + age+ gender_dummy , final)); summary(full_prop_i_ban)
+full_prop_i_ban_se<-sqrt(diag(vcovHC(full_prop_i_ban, type="HC1")))
+
+#Table. Ban support
+stargazer(simple_prop_i_ban, full_prop_i_ban, title="Neighborhood Ban, San Francisco",  label="prop_i_ban_dummy",
+          dep.var.labels=c("Support Supply Increase"), dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("Bivariate", "Full"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T,
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T, omit=c("name"))
+
+# Table. Combine these two tables
+
+stargazer(simple_control, full_control, simple_prop_i_ban, full_prop_i_ban, title="Policy Proposals, San Francisco Sample",  label="sf_policies",
+          dep.var.labels.include = F, dev.var.caption="",
+          column.labels=c("10 Pct Supply", "NIMBY Ban Proposal" ), column.separate = c(2, 2),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat=c("ser","f"), digits=2, align=T, type="latex",
+          initial.zero = F, font.size="small", star.cutoffs = NA, omit.table.layout="n",
+          se=list(simple_control_se, full_control_se, simple_prop_i_ban_se, full_prop_i_ban_se), no.space=T , table.placement = "H" )
+
+
+conjoint_sf<-read.csv("data/conjointSFAPSR.csv")
+
+conjoint_sf$distance <- factor(conjoint_sf$distance,levels= c("2 miles (40 minute walk)", "1 mile (20 minute walk)", "1/2 mile (10 minute walk)",
+                                                              "1/8 mile (2 minute walk)"))
+conjoint_sf$community <- factor(conjoint_sf$community,levels= c("No opinion", "Support the building", "Oppose the building"))
+conjoint_sf$affordable <- factor(conjoint_sf$affordable,levels= c("None of the units", "One-quarter of the units", "Half of the units", "All of the units"))
+conjoint_sf$height <- factor(conjoint_sf$height,levels= c("2 stories", "3 stories", "6 stories", "12 stories"))
+conjoint_sf$site <- factor(conjoint_sf$site, levels=c("Empty building","Parking lot","Open field","Historically-designated building"))
+
+#add indicators 
+conjoint_sf$city_interest_low<-as.factor(ifelse(conjoint_sf$city_interest<0,1,0))
+conjoint_sf$prop_i_ban_dummy<-as.factor(ifelse(conjoint_sf$prop_i_ban_dummy==1,1,0))
+conjoint_sf$luxury<-as.factor(ifelse(conjoint_sf$affordable=="None of the units",1,0))
+
+#subgroups
+owners<-subset(conjoint_sf, own==1)
+renters<-subset(conjoint_sf, own==0)
+
+owners_aff<-subset(owners, luxury==0)
+owners_lux<-subset(owners, luxury==1)
+
+renters_aff<-subset(renters, luxury==0)
+renters_lux<-subset(renters, luxury==1)
+
+# Figure A.1. Recontacted Conjoint San Francisco Sample ####
+renters_prop_i_yes_mod<-amce(selected ~ distance  + community + height + site + tenant + units,
+                             data=subset(renters_lux, prop_i_ban_dummy==1&supply_dummy==1),cluster=T,  respondent.id = "respondent")
+renters_prop_i_no_mod<-amce(selected ~ distance  + community + height + site + tenant + units,
+                            data=subset(renters_lux, prop_i_ban_dummy==0&supply_dummy==1), cluster=T,  respondent.id = "respondent")
+renters_prop_i_yes_mod_frame<-data.frame(Variable=(summary(renters_prop_i_yes_mod)$amce)$Level,
+                                         Coefficient = (summary(renters_prop_i_yes_mod)$amce)$Estimate,
+                                         SE=(summary(renters_prop_i_yes_mod)$amce)$'Std. Err',
+                                         modelName="Supporters")
+renters_prop_i_no_mod_frame<-data.frame(Variable=(summary(renters_prop_i_no_mod)$amce)$Level,
+                                        Coefficient = (summary(renters_prop_i_no_mod)$amce)$Estimate,
+                                        SE=(summary(renters_prop_i_no_mod)$amce)$'Std. Err',
+                                        modelName="Opponents")
+rentersPropIFrame<-data.frame(rbind(renters_prop_i_yes_mod_frame, renters_prop_i_no_mod_frame))
+rentersPropIFrame<-subset(rentersPropIFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersPropIFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Supporters", "Opponents"))
+rentersPropIFrame<-data.frame(rbind(rentersPropIFrame,rentersPropIFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersPropIFrame$Variable <- factor(rentersPropIFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+rentersPropIFrame
+rentersPropINimby<-ggplot(rentersPropIFrame, aes(colour=modelName, shape=modelName))+scale_shape_manual(values=c(4,5))
+#+  scale_color_manual(values=c('#FF9933','#3399FF'))
+rentersPropINimby<-rentersPropINimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+rentersPropINimby<-rentersPropINimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                        ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+rentersPropINimby<-rentersPropINimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                         ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                     position=position_dodge(width=1/2), fill="WHITE")
+rentersPropINimby<-rentersPropINimby+coord_flip()+labs(y="Change in Probability Building Preferred")
+rentersPropINimby<-rentersPropINimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+rentersPropINimby<-rentersPropINimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Renters, Proximity and Ban Support (Market Rate)") + guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+
+print(rentersPropINimby)
+
+# Table B.2 Support for 10% Supply Increase
+
+# Run Regressionss
+
+# Bivariate
+
+supply_simple<-(lm(supply_dummy ~ own, socpoc))
+supply_simple_se<-sqrt(diag(vcovHC(supply_simple, type="HC1")))
+
+# Full
+
+supply_full<-(lm(supply_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc)))
+supply_full_se<-sqrt(diag(vcovHC(supply_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_full_fe<-(lm(supply_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+supply_full_fe_se<-sqrt(diag(vcovHC(supply_full_fe, type="HC1")))
+
+# Create Regression Table
+
+stargazer(supply_simple,  supply_full , supply_full_fe, title="Support for 10 Percent Supply Increase", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_simple_se, supply_full_se, supply_full_fe_se), no.space=T,omit=c("name"), table.placement = "H" )
+
+
+
+# Table B.3. Support for 10 Percent Supply Increase - 7 Point Scale ####
+
+# Run Regressions
+
+# Bivariate
+
+supply_7_simple<-(lm(city_supply ~ own, socpoc))
+supply_7_simple_se<-sqrt(diag(vcovHC(supply_7_simple, type="HC1")))
+
+# Full
+
+supply_7_full<-(lm(city_supply ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc)))
+supply_7_full_se<-sqrt(diag(vcovHC(supply_7_full, type="HC1")))
+
+# Full w/ fixed effects
+
+supply_7_full_fe<-(lm(city_supply ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+supply_7_full_fe_se<-sqrt(diag(vcovHC(supply_7_full_fe, type="HC1")))
+
+# Create Table
+
+stargazer(supply_7_simple,  supply_7_full , supply_7_full_fe, title="Support for 10 Percent Supply Increase - 7 Point Scale", label="supply_7",
+          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
+          se=list(supply_7_simple_se, supply_7_full_se, supply_7_full_fe_se), no.space=T,omit=c("name"), table.placement = "H")
+
+
+# Table B.4. Support for Neighborhood Ban ####
+
+# bivariate
+ban_simple<-(lm(ban_dummy ~ own, socpoc))
+ban_simple_se<-sqrt(diag(vcovHC(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(lm(ban_dummy ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc))
+ban_full_se<-sqrt(diag(vcovHC(ban_full, type="HC1")))
+
+#full w/ fixed effects
+ban_full_fe<-(lm(ban_dummy ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+ban_full_fe_se<-sqrt(diag(vcovHC(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development", label="ban_dummy",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+
+
+# Table B.5. Support for Neighborhood Ban 7 point scale ####
+
+#simple
+
+ban_simple<-(lm(neighborhood_ban ~ own, socpoc))
+ban_simple_se<-sqrt(diag(vcovHC(ban_simple, type="HC1")))
+
+# full
+
+ban_full<-(lm(neighborhood_ban ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc))
+ban_full_se<-sqrt(diag(vcovHC(ban_full, type="HC1")))
+
+#full w/ fixed effects
+
+ban_full_fe<-(lm(neighborhood_ban ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
+ban_full_fe_se<-sqrt(diag(vcovHC(ban_full_fe, type="HC1")))
+
+# Table
+stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development - 7 Point Scale", label="neighborhood_ban_7",
+          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
+          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
+          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
+          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
+          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
+          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
+
+
+# Figure C.1. Homeowner Proximity by Income ####
+
+summary(owners$income) #median==80,000
+owners_liberal<-amce(select ~ distance + affordable + community + height + site + tenant + units,
+                     data=subset(owners.conjoint, income>80000), cluster=T,  respondent.id = "CaseID")
+owners_conservatives<-amce(select ~ distance + affordable + community + height + site + tenant + units,
+                           data=subset(owners.conjoint, income<=80000), cluster=T,  respondent.id = "CaseID")
+owners_liberal_frame<-data.frame(Variable=(summary(owners_liberal)$amce)$Level,
+                                 Coefficient = (summary(owners_liberal)$amce)$Estimate,
+                                 SE=(summary(owners_liberal)$amce)$'Std. Err',
+                                 modelName="Below Median Income")
+owners_liberal_frame
+owners_conservatives_frame<-data.frame(Variable=(summary(owners_conservatives)$amce)$Level,
+                                       Coefficient = (summary(owners_conservatives)$amce)$Estimate,
+                                       SE=(summary(owners_conservatives)$amce)$'Std. Err',
+                                       modelName="Above Median Income")
+ideologyFrame<-data.frame(rbind(owners_liberal_frame, owners_conservatives_frame))
+ideologyFrame<-subset(ideologyFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+ideologyFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Below Median Income", "Above Median Income"))
+ideologyFrame<-data.frame(rbind(ideologyFrame,ideologyFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+ideologyFrame$Variable <- factor(ideologyFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+ideology_affordable<-ggplot(ideologyFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+ideology_affordable<-ideology_affordable+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+ideology_affordable<-ideology_affordable+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                            ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+ideology_affordable<-ideology_affordable+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                             ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                         position=position_dodge(width=1/2),  fill="WHITE")
+ideology_affordable<-ideology_affordable+coord_flip()+ labs(y="Change in Probability Building Preferred")
+ideology_affordable<-ideology_affordable+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+ideology_affordable<-ideology_affordable+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle("Homeowners, Proximity by Income")+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(ideology_affordable)
+
+
+# Figure C.2 Homeowner Proximity by Ideology ####
+
+# Redefine data-sets
+
+renters_aff<-subset(renters.conjoint, aff_housing==1)
+renters_lux<-subset(renters.conjoint, aff_housing==0)
+
+owners_aff<-subset(owners.conjoint, aff_housing==1)
+owners_lux<-subset(owners.conjoint, aff_housing==0)
+
+# Run the regression 
+
+owners_liberal<-amce(select ~ distance + affordable  + community + height + site + tenant + units,
+                     data=subset(owners_aff, ideology>4), cluster=T,  respondent.id = "CaseID")
+owners_conservatives<-amce(select ~ distance + affordable  + community + height + site + tenant + units,
+                           data=subset(owners_aff, ideology<4), cluster=T,  respondent.id = "CaseID")
+owners_liberal_frame<-data.frame(Variable=(summary(owners_liberal)$amce)$Level,
+                                 Coefficient = (summary(owners_liberal)$amce)$Estimate,
+                                 SE=(summary(owners_liberal)$amce)$'Std. Err',
+                                 modelName="Liberals")
+owners_liberal_frame
+owners_conservatives_frame<-data.frame(Variable=(summary(owners_conservatives)$amce)$Level,
+                                       Coefficient = (summary(owners_conservatives)$amce)$Estimate,
+                                       SE=(summary(owners_conservatives)$amce)$'Std. Err',
+                                       modelName="Conservatives")
+ideologyFrame<-data.frame(rbind( owners_conservatives_frame,owners_liberal_frame))
+ideologyFrame<-subset(ideologyFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+ideologyFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c( "Conservatives", "Liberals"))
+ideologyFrame<-data.frame(rbind(ideologyFrame,ideologyFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+ideologyFrame$Variable <- factor(ideologyFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+ideology_affordable<-ggplot(ideologyFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+ideology_affordable<-ideology_affordable+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+ideology_affordable<-ideology_affordable+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                            ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+ideology_affordable<-ideology_affordable+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                             ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                         position=position_dodge(width=1/2),  fill="WHITE")
+ideology_affordable<-ideology_affordable+coord_flip()+ labs(y="Change in Probability Building Preferred")
+ideology_affordable<-ideology_affordable+theme(legend.title=element_blank(),axis.title.y=element_blank())+ theme(aspect.ratio = .5)
+ideology_affordable<-ideology_affordable+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle("Homeowners, Proximity by Ideology")+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(ideology_affordable)
+
+
+# Figure C.3 Proximity by Affordability Homeowners and Renters ####
+
+affordable_values<-c("None of the units", "One-quarter of the units", "Half of the units", "All of the units")
+est1<-rep(NA, length(affordable_values))
+se1<-rep(NA, length(affordable_values))
+for(i in 1:4){
+  mod1<-amce(select ~ distance + community + height + site + tenant + units,
+             data=subset(owners.conjoint, affordable==affordable_values[i]), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(affordable_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+est2<-rep(NA, length(affordable_values))
+se2<-rep(NA, length(affordable_values))
+for(i in 1:4){
+  mod2<-amce(select ~ distance + community + height + site + tenant + units,
+             data=subset(renters.conjoint, affordable==affordable_values[i]), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(affordable_values,est2,se2))
+mod2ests$uCI<-est1+se1*1.96
+mod2ests$lCI<-est1-se1*1.96
+mod2ests
+#combine data
+
+mod1<-mod1ests
+class(mod1$est)
+mod1$quintle<-c("None of the units", "One-quarter of the units", "Half of the units", "All of the units")
+mod1$modelName<-"Homeowners"
+names(mod1)<-c("affordability","est","se","uci","lci","Quintile","modelName")
+mod2<-mod2ests
+mod2$quintle<-c("None of the units", "One-quarter of the units", "Half of the units", "All of the units")
+mod2$modelName<-"Renters"
+names(mod2)<-c("affordability","est","se","uci","lci","Quintile","modelName")
+modFrame<-data.frame(rbind(mod1,mod2))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("None of the units", "One-quarter of the units", "Half of the units", "All of the units"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame$est<-as.numeric(as.character(modFrame$est))
+modFrame$se<-as.numeric(as.character(modFrame$se))
+
+modFrame$modelName<-factor(modFrame$modelName, levels=c("Homeowners","Renters"))
+modFrame
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.2, .2))
+renters_type_nimby<-renters_type_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Affordability Level")
+renters_type_nimby<-renters_type_nimby+theme(legend.title=element_blank())+ theme(aspect.ratio = .5)
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Proximity by Affordability") + guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_type_nimby)
+
+
+# Figure C.4 Renters Proximity by each level of affordability, by City ####
+
+quantile(conjoint4$zri_city, probs=seq(0,1,.2), na.rm=T)
+
+zri_values<-c(0,1217,1480,1936,2427,7500)
+est1<-rep(NA, length(zri_values))
+se1<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="None of the units"), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+est2<-rep(NA, length(zri_values))
+se2<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="One-quarter of the units"), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+
+est3<-rep(NA, length(zri_values))
+se3<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod3<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="Half of the units"), cluster=T, respondent.id = "CaseID")
+  est3[i]<-summary(mod3)$amce[5,3]
+  se3[i]<-summary(mod3)$amce[5,4]
+}
+mod3ests<-as.data.frame(cbind(zri_values,est3,se3))
+mod3ests$uCI<-est3+se3*1.96
+mod3ests$lCI<-est3-se3*1.96
+
+est4<-rep(NA, length(zri_values))
+se4<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod4<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri_city>zri_values[i] & zri_city<=zri_values[i+1]&affordable=="All of the units"), cluster=T, respondent.id = "CaseID")
+  est4[i]<-summary(mod4)$amce[5,3]
+  se4[i]<-summary(mod4)$amce[5,4]
+}
+mod4ests<-as.data.frame(cbind(zri_values,est4,se4))
+mod4ests$uCI<-est4+se4*1.96
+mod4ests$lCI<-est4-se4*1.96
+
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"None of Units"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Quarter of Units"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod3<-mod3ests[-6,]
+mod3$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod3$modelName<-"Half of Units"
+names(mod3)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod4<-mod4ests[-6,]
+mod4$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod4$modelName<-"All of Units"
+names(mod4)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+modFrame<-data.frame(rbind(mod1,mod2,mod3,mod4))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("None of Units","Quarter of Units","Half of Units","All of Units"))
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.3, .3))#+ scale_colour_discrete(name="Affordability") +scale_shape_discrete(name="Affordability")
+renters_type_nimby<-renters_type_nimby+theme_bw()+theme(legend.title = element_blank())+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Average City Rent (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle(("Renters, Proximity by Affordability and Average Rent by City"))+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_type_nimby)
+
+
+# Figure C.5 Renters Proximity by Affordability and Average Rent by ZIP ####
+
+quantile(conjoint4$zri, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1204,1526,1959,2488,13000)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri>zri_city_values[i] & zri<=zri_city_values[i+1]&luxury==1), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+est2<-rep(NA, length(zri_city_values))
+se2<-rep(NA, length(zri_city_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(renters.conjoint, zri>zri_city_values[i] & zri<=zri_city_values[i+1]&luxury==0), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_city_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"Market Rate"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Affordable"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+modFrame<-data.frame(rbind(mod1,mod2))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive", "2nd","3rd", "4th", "Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("Market Rate","Affordable"))
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_type_nimby<-renters_type_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes(x=Quintile, ymin=est-se*interval1, 
+                                                          ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred",x="Average ZIP Rent (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(legend.title=element_blank()) + theme(aspect.ratio = .5)
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ ggtitle("Renters, Proximity by Affordability and Average Rent by ZIP") +guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_type_nimby)
+
+
+
+# Figure C.6 Homeowners Proximity by each level of affordability, by City ####
+
+quantile(conjoint4$zri_city, probs=seq(0,1,.2), na.rm=T)
+zri_values<-c(0,1217,1480,1936,2427,7500)
+est1<-rep(NA, length(zri_values))
+se1<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod1<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="None of the units"), cluster=T, respondent.id = "CaseID")
+  est1[i]<-summary(mod1)$amce[5,3]
+  se1[i]<-summary(mod1)$amce[5,4]
+}
+mod1ests<-as.data.frame(cbind(zri_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+
+est2<-rep(NA, length(zri_values))
+se2<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod2<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="One-quarter of the units"), cluster=T, respondent.id = "CaseID")
+  est2[i]<-summary(mod2)$amce[5,3]
+  se2[i]<-summary(mod2)$amce[5,4]
+}
+mod2ests<-as.data.frame(cbind(zri_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+
+est3<-rep(NA, length(zri_values))
+se3<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod3<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="Half of the units"), cluster=T, respondent.id = "CaseID")
+  est3[i]<-summary(mod3)$amce[5,3]
+  se3[i]<-summary(mod3)$amce[5,4]
+}
+mod3ests<-as.data.frame(cbind(zri_values,est3,se3))
+mod3ests$uCI<-est3+se3*1.96
+mod3ests$lCI<-est3-se3*1.96
+
+est4<-rep(NA, length(zri_values))
+se4<-rep(NA, length(zri_values))
+for(i in 1:5){
+  mod4<-amce(select ~ distance+ community + height + site + tenant + units,
+             data=subset(owners.conjoint, zri_city>zri_values[i] & zri_city<zri_values[i+1]&affordable=="All of the units"), cluster=T, respondent.id = "CaseID")
+  est4[i]<-summary(mod4)$amce[5,3]
+  se4[i]<-summary(mod4)$amce[5,4]
+}
+mod4ests<-as.data.frame(cbind(zri_values,est4,se4))
+mod4ests$uCI<-est4+se4*1.96
+mod4ests$lCI<-est4-se4*1.96
+
+#combine data
+mod1<-mod1ests[-6,]
+mod1$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod1$modelName<-"None of Units"
+names(mod1)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod2<-mod2ests[-6,]
+mod2$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod2$modelName<-"Quarter of Units"
+names(mod2)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod3<-mod3ests[-6,]
+mod3$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod3$modelName<-"Half of Units"
+names(mod3)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+mod4<-mod4ests[-6,]
+mod4$quintle<-c("Least Expensive","2nd","3rd","4th","Most Expensive")
+mod4$modelName<-"All of Units"
+names(mod4)<-c("zri","est","se","uci","lci","Quintile","modelName")
+
+modFrame<-data.frame(rbind(mod1,mod2,mod3,mod4))
+modFrame$Quintile <- factor(modFrame$Quintile, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+modFrame
+modFrame$modelName<-factor(modFrame$modelName, levels=c("None of Units","Quarter of Units","Half of Units","All of Units"))
+
+renters_type_nimby<-ggplot(modFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.3, .3))#+ scale_colour_discrete(name="Affordability") +scale_shape_discrete(name="Affordability")
+renters_type_nimby<-renters_type_nimby+theme_bw()+theme(legend.title = element_blank())+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)
+renters_type_nimby<-renters_type_nimby+geom_linerange(aes( x=Quintile, ymin=est-se*interval1, 
+                                                           ymax=est+se*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_type_nimby<-renters_type_nimby+geom_pointrange(aes(x=Quintile, y=est, ymin=est-se*interval2,
+                                                           ymax=est+se*interval2), lwd=1/2,
+                                                       position=position_dodge(width=1/2),  fill="WHITE")
+renters_type_nimby<-renters_type_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred", x="Average Rent by City (Quintiles)")
+renters_type_nimby<-renters_type_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm"))+ggtitle(("Homeowners, Proximity by Affordability and Average Rent by City"))+guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_type_nimby)
+
+
+renters_city_low_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                           data=subset(renters_aff, city_interest<0) , cluster=T,  respondent.id = "CaseID")
+renters_city_high_mod<-amce(select ~ distance  + community + height + site + tenant + units,
+                            data=subset(renters_aff, city_interest>=0), cluster=T,  respondent.id = "CaseID")
+renters_city_low_mod_frame<-data.frame(Variable=(summary(renters_city_low_mod)$amce)$Level,
+                                       Coefficient = (summary(renters_city_low_mod)$amce)$Estimate,
+                                       SE=(summary(renters_city_low_mod)$amce)$'Std. Err',
+                                       modelName="Price Anxious")
+renters_city_high_mod_frame<-data.frame(Variable=(summary(renters_city_high_mod)$amce)$Level,
+                                        Coefficient = (summary(renters_city_high_mod)$amce)$Estimate,
+                                        SE=(summary(renters_city_high_mod)$amce)$'Std. Err',
+                                        modelName="Price Neutral")
+rentersCityFrame<-data.frame(rbind(renters_city_low_mod_frame, renters_city_high_mod_frame))
+rentersCityFrame<-subset(rentersCityFrame, Variable=="1/8 mile (2 minute walk)"|Variable=="1/2 mile (10 minute walk)"|Variable=="1 mile (20 minute walk)")
+rentersCityFrameIntercepts<-data.frame(Variable=c("2 miles (40 minute walk)", "2 miles (40 minute walk)") ,Coefficient=c(0,0), SE=c(0,0), modelName=c("Price Anxious", "Price Neutral"))
+rentersCityFrame<-data.frame(rbind(rentersCityFrame,rentersCityFrameIntercepts))
+interval1<-qnorm((1-.9)/2)
+interval2<-qnorm((1-.95)/2)
+rentersCityFrame$Variable <- factor(rentersCityFrame$Variable, levels = c("1/8 mile (2 minute walk)","1/2 mile (10 minute walk)", "1 mile (20 minute walk)", "2 miles (40 minute walk)"))
+renters_anxious_nimby<-ggplot(rentersCityFrame, aes(colour=modelName, shape=modelName))+ scale_y_continuous(limits = c(-.25, .25))
+renters_anxious_nimby<-renters_anxious_nimby+theme_bw()+scale_colour_grey(end=.5)+geom_hline(yintercept=0, colour=gray(1/2), lty=2)+scale_shape_manual(values=c(4,5))
+#+ scale_color_manual(values=c('#990099','#33CC00'))
+renters_anxious_nimby<-renters_anxious_nimby+geom_linerange(aes(x=Variable, ymin=Coefficient-SE*interval1, 
+                                                                ymax=Coefficient+SE*interval1), lwd=1, position=position_dodge(width=1/2))
+renters_anxious_nimby<-renters_anxious_nimby+geom_pointrange(aes(x=Variable, y=Coefficient, ymin=Coefficient-SE*interval2,
+                                                                 ymax=Coefficient+SE*interval2), lwd=1/2,
+                                                             position=position_dodge(width=1/2), fill="WHITE")
+renters_anxious_nimby<-renters_anxious_nimby+coord_flip()+ labs(y="Change in Probability Building Preferred")
+renters_anxious_nimby<-renters_anxious_nimby+theme(legend.title=element_blank(),axis.title.y=element_blank())+theme(aspect.ratio = .5)
+renters_anxious_nimby<-renters_anxious_nimby+theme(plot.margin=unit(c(0,0,0,0),"mm")) + ggtitle("Renters, Proximity by Price Anxiety (Market Rate)")+ theme(aspect.ratio = .5)+ guides(colour=guide_legend(reverse=T), shape=guide_legend(reverse=T))
+
+
+print(renters_anxious_nimby)
+
+
+# Figure C.8. Renters Suppport for Supply Cityiwde, Average ZIP Rent ####
+
+quantile(socpoc$zri, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1204,1526,1958,2488,13000)
+est1<-rep(NA, length(zri_city_values))
+se1<-rep(NA, length(zri_city_values))
+
+for(i in 1:5){
+  section<-subset(renters.socpoc, zri>zri_city_values[i] & zri<=zri_city_values[i+1])
+  est1[i]<-mean(section$supply_dummy,na.rm=T)
+  se1[i]<-sqrt((est1[i]*(1-est1[i]))/nrow(section))
+}
+
+mod1ests<-as.data.frame(cbind(zri_city_values,est1,se1))
+mod1ests$uCI<-est1+se1*1.96
+mod1ests$lCI<-est1-se1*1.96
+
+mod1estimates<-mod1ests[1:5,]
+colnames(mod1estimates)<-c("Rent","Estimate", "StdErr", "UpperCI", "LowerCI")
+mod1estimates$Quintile<-c(1,2,3,4,5)
+mod1estimates
+mod1estimates$Cost<-factor(c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+levels(mod1estimates$Cost)
+pd <- position_dodge(0.1)
+mod1estimates$Cost <- factor(mod1estimates$Cost, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+mod1estimates
+renter_zip_supply<-ggplot(mod1estimates, aes(x=Cost, y=Estimate))+scale_y_continuous(limits = c(0, 1))+coord_flip()+
+  geom_errorbar(aes(ymin=LowerCI, ymax=UpperCI), width=.1, position=pd) +
+  geom_point(position=pd)+  labs(x = "Average ZIP Rent (Quintiles)", y="Support for Supply (%)")+ggtitle("Renters Support for Supply Citywide, by Average ZIP Rent") + theme(aspect.ratio = .5)+
+  theme_bw()+scale_fill_grey()
+
+
+print(renter_zip_supply)
+
+# Figure C.9. Homeowners Support for Supply Citywide, Average City Rent ####
+quantile(socpoc$zri_city, probs=seq(0,1,.2), na.rm=T)
+zri_city_values<-c(0,1217,1480,1936,2427,7344)
+
+est2<-rep(NA, length(zri_city_values))
+se2<-rep(NA, length(zri_city_values))
+
+for(i in 1:5){
+  section<-subset(owners.socpoc, zri_city>zri_city_values[i] & zri_city<=zri_city_values[i+1])
+  est2[i]<-mean(section$supply_dummy,na.rm=T)
+  se2[i]<-sqrt((est2[i]*(1-est2[i]))/nrow(section))
+}
+
+mod2ests<-as.data.frame(cbind(zri_city_values,est2,se2))
+mod2ests$uCI<-est2+se2*1.96
+mod2ests$lCI<-est2-se2*1.96
+
+mod2estimates<-mod2ests[1:5,]
+colnames(mod2estimates)<-c("Rent","Estimate", "StdErr", "UpperCI", "LowerCI")
+mod2estimates$Quintile<-c(1,2,3,4,5)
+mod2estimates
+mod2estimates$Cost<-factor(c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+levels(mod2estimates$Cost)
+pd <- position_dodge(0.1)
+mod2estimates$Cost <- factor(mod2estimates$Cost, levels = c("Least Expensive","2nd","3rd","4th","Most Expensive"))
+owners_city_supply<-ggplot(mod2estimates, aes(x=Cost, y=Estimate))+scale_y_continuous(limits = c(0, 1))+coord_flip()+
+  geom_errorbar(aes(ymin=LowerCI, ymax=UpperCI), width=.1, position=pd) +
+  geom_point(position=pd)+ggtitle("Homeowners Support for Supply Citywide, by Average Rent")+
+  labs(x = "Average City Rent (Quintiles)", y="Support for Supply (%)")+ theme(aspect.ratio=.5)+
+  theme_bw()+scale_fill_grey()
+
+
+print(owners_city_supply)
+```
+
+
+# Works Cited
