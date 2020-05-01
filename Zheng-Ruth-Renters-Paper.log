@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 APR 2020 00:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  1 MAY 2020 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -740,429 +740,429 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 163.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 213.
+(Font)              <9> on input line 167.
+[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.213 
+      ]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 217.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3pdfTeX warning (ext4): destination with the same identifier (name{table.1})
+) [4pdfTeX warning (ext4): destination with the same identifier (name{table.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.253 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+l.301 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.253 
+l.301 
       ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 308.
+(hyperref)                than one, level fixed on input line 306.
 
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 1-1.pdf, id=193, 457.71pt x
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 1-1.pdf, id=195, 457.71pt x
  313.17pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 1-1.pdf Graphic file (
 type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 1-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 1-1
-.pdf  used on input line 310.
+.pdf  used on input line 308.
 (pdftex.def)             Requested size: 457.72285pt x 313.17877pt.
-[4pdfTeX warning (ext4): destination with the same identifier (name{table.3}) h
-as been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.313 ...rs-by-affordability-of-proposed-housing}}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{table.4}) has been already used, duplicate
- ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.313 ...rs-by-affordability-of-proposed-housing}}
-                                                  ]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 3 print-1.pdf, id=203, 464.
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 3 print-1.pdf, id=196, 464.
 73625pt x 181.67876pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 3 print-1.pdf Graphic 
 file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 3 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 3 p
-rint-1.pdf  used on input line 315.
+rint-1.pdf  used on input line 313.
 (pdftex.def)             Requested size: 464.74928pt x 181.68384pt.
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 4-1.pdf, id=204, 464.73625p
+[5pdfTeX warning (ext4): destination with the same identifier (name{table.4}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.316 ...rs-by-affordability-of-proposed-housing}}
+                                                   <./Zheng-Ruth-Renters-Paper_
+files/figure-latex/Figure 1-1.pdf>]
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 4-1.pdf, id=213, 464.73625p
 t x 181.67876pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 4-1.pdf Graphic file (
 type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 4-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 4-1
-.pdf  used on input line 320.
+.pdf  used on input line 318.
 (pdftex.def)             Requested size: 464.74928pt x 181.68384pt.
-[5 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 1-1.pdf> <./Zheng-Ruth
--Renters-Paper_files/figure-latex/Figure 3 print-1.pdf>]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 5-1.pdf, id=228, 464.
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 5-1.pdf, id=214, 464.
 73625pt x 191.71625pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 5-1.pdf Graphic 
 file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 5-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figu
-re 5-1.pdf  used on input line 325.
+re 5-1.pdf  used on input line 323.
 (pdftex.def)             Requested size: 464.74928pt x 191.72162pt.
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 6-1.pdf, id=229, 463.
+[6 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 3 print-1.pdf> <./Zhen
+g-Ruth-Renters-Paper_files/figure-latex/Figure 4-1.pdf>]
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 6-1.pdf, id=235, 463.
 7325pt x 316.18124pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 6-1.pdf Graphic 
 file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 6-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figu
-re 6-1.pdf  used on input line 330.
+re 6-1.pdf  used on input line 328.
 (pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
-[6 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 4-1.pdf> <./Zheng-Ruth
--Renters-Paper_files/figure-latex/Print Figure 5-1.pdf>]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 7 print-1.pdf, id=250, 464.
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 7 print-1.pdf, id=236, 464.
 73625pt x 178.6675pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 7 print-1.pdf Graphic 
 file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 7 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 7 p
-rint-1.pdf  used on input line 335.
+rint-1.pdf  used on input line 333.
 (pdftex.def)             Requested size: 464.74928pt x 178.6725pt.
-[7 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 6-1.pdf> <./Zhen
-g-Ruth-Renters-Paper_files/figure-latex/Figure 7 print-1.pdf>]
+[7 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure 5-1.pdf> <./Zhen
+g-Ruth-Renters-Paper_files/figure-latex/Print Figure 6-1.pdf>] [8pdfTeX warning
+ (ext4): destination with the same identifier (name{table.5}) has been already 
+used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.395 
+       <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure 7 print-1.pdf>]
 <Zheng-Ruth-Renters-Paper_files/figure-latex/Figure A.1 print-1.pdf, id=273, 46
 4.73625pt x 183.68625pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure A.1 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure A.1 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure A.1
- print-1.pdf  used on input line 401.
+ print-1.pdf  used on input line 399.
 (pdftex.def)             Requested size: 464.74928pt x 183.69138pt.
-[8pdfTeX warning (ext4): destination with the same identifier (name{table.5}) h
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.6}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.444 \end{table}
+l.482 \end{table}
                  pdfTeX warning (ext4): destination with the same identifier (n
-ame{table.6}) has been already used, duplicate ignored
+ame{table.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.444 \end{table}
+l.482 \end{table}
                   <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure A.1 pri
-nt-1.pdf>] [9pdfTeX warning (ext4): destination with the same identifier (name{
-table.7}) has been already used, duplicate ignored
+nt-1.pdf>] [10pdfTeX warning (ext4): destination with the same identifier (name
+{table.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.485 
-      ] [10pdfTeX warning (ext4): destination with the same identifier (name{ta
-ble.8}) has been already used, duplicate ignored
+l.562 \end{table}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{table.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.565 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.9
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.565 
-      ]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.1 print-1.pdf, id=306, 46
+l.562 \end{table}
+                 ]
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.1 print-1.pdf, id=299, 46
 4.73625pt x 161.60374pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.1 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.1 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.1
- print-1.pdf  used on input line 572.
+ print-1.pdf  used on input line 570.
 (pdftex.def)             Requested size: 464.74928pt x 161.60828pt.
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C2 print-1.pdf, id=307, 464
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C2 print-1.pdf, id=300, 464
 .73625pt x 177.66376pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C2 print-1.pdf Graphic
  file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C2 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C2 
-print-1.pdf  used on input line 577.
+print-1.pdf  used on input line 575.
 (pdftex.def)             Requested size: 464.74928pt x 177.66873pt.
 [11pdfTeX warning (ext4): destination with the same identifier (name{table.10})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.580 ...f-affordability-by-homeownership-status}}
+l.578 ...f-affordability-by-homeownership-status}}
                                                    <./Zheng-Ruth-Renters-Paper_
 files/figure-latex/Figure C.1 print-1.pdf>]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.3 print-1.pdf, id=323, 46
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.3 print-1.pdf, id=317, 46
 4.73625pt x 173.64874pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.3 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.3 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.3
- print-1.pdf  used on input line 582.
+ print-1.pdf  used on input line 580.
 (pdftex.def)             Requested size: 464.74928pt x 173.65361pt.
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.4 print-1.pdf, id=324, 46
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.4 print-1.pdf, id=318, 46
 4.73625pt x 325.215pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.4 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.4 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.4
- print-1.pdf  used on input line 587.
+ print-1.pdf  used on input line 585.
 (pdftex.def)             Requested size: 464.74928pt x 325.22412pt.
 [12 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C2 print-1.pdf> <./Zh
 eng-Ruth-Renters-Paper_files/figure-latex/Figure C.3 print-1.pdf>]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.5 print-1.pdf, id=345, 46
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.5 print-1.pdf, id=339, 46
 4.73625pt x 191.71625pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.5 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.5 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.5
- print-1.pdf  used on input line 592.
+ print-1.pdf  used on input line 590.
 (pdftex.def)             Requested size: 464.74928pt x 191.72162pt.
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.6 print-1.pdf, id=346, 46
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.6 print-1.pdf, id=340, 46
 4.73625pt x 325.215pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.6 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.6 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.6
- print-1.pdf  used on input line 597.
+ print-1.pdf  used on input line 595.
 (pdftex.def)             Requested size: 464.74928pt x 325.22412pt.
 [13 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.4 print-1.pdf> <./Z
 heng-Ruth-Renters-Paper_files/figure-latex/Figure C.5 print-1.pdf>]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.7 print-1.pdf, id=368, 46
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.7 print-1.pdf, id=362, 46
 4.73625pt x 178.6675pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.7 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.7 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.7
- print-1.pdf  used on input line 602.
+ print-1.pdf  used on input line 600.
 (pdftex.def)             Requested size: 464.74928pt x 178.6725pt.
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.8 print-1.pdf, id=369, 46
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.8 print-1.pdf, id=363, 46
 3.7325pt x 316.18124pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.8 print-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.8 print-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.8
- print-1.pdf  used on input line 607.
+ print-1.pdf  used on input line 605.
 (pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
 [14 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.6 print-1.pdf> <./Z
 heng-Ruth-Renters-Paper_files/figure-latex/Figure C.7 print-1.pdf>]
-<Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure C.9-1.pdf, id=390, 46
+<Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure C.9-1.pdf, id=384, 46
 3.7325pt x 316.18124pt>
 File: Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure C.9-1.pdf Graphi
 c file (type pdf)
 <use Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure C.9-1.pdf>
 Package pdftex.def Info: Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figu
-re C.9-1.pdf  used on input line 612.
+re C.9-1.pdf  used on input line 610.
 (pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
 [15 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Figure C.8 print-1.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 619.
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 877
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 622.
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 880
 .
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [16 <./Zheng-Ruth-Renters-Paper_files/figure-latex/Print Figure C.9-1.pdf>]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [17]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [18]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [19]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [20]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [21]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [22]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [23]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [24]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [25]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [26]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [27]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [28]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [29]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [30]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [31]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [32]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [33]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [34]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [35]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [36]
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1790
+Underfull \vbox (badness 10000) detected at line 1793
  []
 
 [37] [38]
-Overfull \hbox (101.16858pt too wide) in paragraph at lines 1830--1832
+Overfull \hbox (101.16858pt too wide) in paragraph at lines 1839--1841
 \T1/lmr/m/n/10 (-20) https://www-jstor-org.ezp-prod1.hul.harvard.edu/stable/210
 9557?sid=primo&origin=crossref&seq=1#metadata_info_tab_contents. 
  []
 
 
-Overfull \hbox (98.50262pt too wide) in paragraph at lines 1839--1841
+Overfull \hbox (98.50262pt too wide) in paragraph at lines 1848--1850
 \T1/lmr/m/n/10 (-20) Re-search - Carissa Schively, 2007.'' n.d. https://journal
 s-sagepub-com.ezp-prod1.hul.harvard.edu/doi/abs/10.1177/0885412206295845. 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1842.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1851.
 [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1842.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1851.
 (./Zheng-Ruth-Renters-Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1842.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1842.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1851.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1851.
 
 Package rerunfilecheck Info: File `Zheng-Ruth-Renters-Paper.out' has not change
 d.
-(rerunfilecheck)             Checksum: 3FFBAEE9E4451175B2F4ABB883326F57;17433.
+(rerunfilecheck)             Checksum: EB657286E146374D8C9D708FD41A43B7;16621.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13510 strings out of 492616
- 206049 string characters out of 6129482
- 696797 words of memory out of 5000000
- 16982 multiletter control sequences out of 15000+600000
- 80165 words of font info for 117 fonts, out of 8000000 for 9000
+ 13520 strings out of 492616
+ 205945 string characters out of 6129482
+ 699645 words of memory out of 5000000
+ 16980 multiletter control sequences out of 15000+600000
+ 80663 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,16n,58p,1690b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1184,10 +1184,10 @@ st/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/lm/lmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
 lm/lmtk10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on Zheng-Ruth-Renters-Paper.pdf (39 pages, 538485 bytes).
+Output written on Zheng-Ruth-Renters-Paper.pdf (39 pages, 541172 bytes).
 PDF statistics:
- 642 PDF objects out of 1000 (max. 8388607)
- 530 compressed objects within 6 object streams
+ 641 PDF objects out of 1000 (max. 8388607)
+ 529 compressed objects within 6 object streams
  141 named destinations out of 1000 (max. 500000)
- 20857 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 20849 words of extra memory for PDF output out of 24883 (max. 10000000)
 

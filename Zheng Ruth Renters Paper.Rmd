@@ -1,5 +1,5 @@
 ---
-title: "Draft: Replication of \"When Do Renters Behave Like Homeowners? High Rent, Price Anxiety, and NIMBYism\""
+title: "Replication of \"When Do Renters Behave Like Homeowners? High Rent, Price Anxiety, and NIMBYism\""
 author: "Ruth Zheng"
 date: "April 24, 2020"
 output:
@@ -21,19 +21,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Abstract
 
-Hankinson (2018) shows that renters exhibit "Not in My Back Yard" (NIMBY) behavior on par with homeowners in high-rent cities despite overall support for a housing supply increase. I successfully replicated Hankinson's results. The increased likelihood for these renters to reject policy proposals that create new housing helps explain the affordable housing crisis in major American cities.^[All analysis for this paper is available at: https://github.com/zhengruth/replication_renters_paper_1006]
+Hankinson (2018) shows that renters exhibit "Not in My Back Yard" (NIMBY) behavior on par with homeowners in high-rent cities despite overall support for a housing supply increase. I successfully replicated Hankinson's results and confirmed they are consistent with results using a logistic regression model. The increased likelihood for these renters to reject policy proposals that create new housing helps explain the affordable housing crisis in major American cities.^[All analysis for this paper is available at: https://github.com/zhengruth/replication_renters_paper_1006]
 
 # Introduction
 
 Using original data sets from an exit poll in San Francisco and a nation-wide survey, Hankinson shows that renters are more likely to exhibit NIMBY-ism when they live in high density cities with high price levels controlling for other demographic characteristics -- hankinson demonstrates this statistically significant and positive relationship between neighborhood price levels and two response variables: one indicating opposition to a housing supply increase and the other support for a ban on neighborhood development in both "ordinary" data sets and a set from a nation-wide conjoint survey. The data also confirms the prevailing assumption that renters are more likely to support housing supply increases in general. Hankinson reasons a causal mechanism for this surprising trend may be that renters in high-rent neighborhoods fear that new housing may spur gentrification which would only further drive rent up. Exploring this hypothesis, he shows a significant and positive relationship between housing price-related anxiety and renters' likelihood for exhibiting NIMBY-ism.  
 
-# Literature Review
+# Literature and Paper Review
 
-In the past 30 years, the housing market has seen a trend of widening inequality (Glaeser, Gyourko, and Saks 2005). Prices in the top quintile have dramatically increased, particularly in crowded, “superstar” cities such as San Francisco, New York City, and Los Angeles. Yet, the resulting housing shortage cannot be attributed to a natural supply ceiling alone (Glaeser, Gyourko, and Saks 2008; Solnit and Schwartzenberg 2000). Glaeser and Gyourko find that in Manhattan prices are twice their supply costs (Glaeser, Gyourko, and Saks 2008). Likewise, Barton demonstrates that in San Francisco, high rents cannot be accounted for by higher real value -- that is, quality, operating costs, and construction costs (Barton 2011). They argue that the decoupling of supply and demand in Manhattan and other major cities must be attributed at least in part to regulation constraining the housing supply (Glaeser, Gyourko, and Saks 2008). Specifically, land-use regulations are associated with reductions in construction activity and higher prices (Glaeser and Ward 2008; Ilhanfeldt 2007). In fact, the responsiveness of the housing supply to increased demand seems to depend significantly on land use and planning regulations (Caldera and Johansson 2013). This is particularly true in high-price locales such as the greater Boston area (Glaeser and Ward 2008) and the San Francisco Bay Area (Kok, Monkkonen, and Quigley 2014).
+In the past 30 years, the housing market has seen a trend of widening inequality (Glaeser, Gyourko, and Saks 2005). Prices in the top quintile have dramatically increased, particularly in crowded, “superstar” cities such as San Francisco, New York City, and Los Angeles. Yet, the resulting housing shortage cannot be attributed to a natural supply ceiling alone (Glaeser, Gyourko, and Saks 2008; Solnit and Schwartzenberg 2000). Glaeser and Gyourko find that in Manhattan prices are twice their supply costs (Glaeser, Gyourko, and Saks 2008). Likewise, Barton demonstrates that in San Francisco, high rents cannot be accounted for by higher real value -- that is, quality, operating costs, and construction costs (Barton 2011). They argue that the decoupling of supply and demand in Manhattan and other major cities must be attributed at least in part to local regulations constraining the housing supply (Glaeser, Gyourko, and Saks 2008). Specifically, land-use regulations are associated with reductions in construction activity and higher prices (Glaeser and Ward 2008; Ilhanfeldt 2007). In fact, the responsiveness of the housing supply to increased demand seems to depend significantly on land use and planning regulations (Caldera and Johansson 2013). This is particularly true in high-price locales such as the greater Boston area (Glaeser and Ward 2008) and the San Francisco Bay Area (Kok, Monkkonen, and Quigley 2014) where the annual number of new housing permits per 2000 has stagnated despite growing demand (Glaser and Gyourko 2018).
 
-It is generally accepted that homeowners have an incentive to support regulations that raise the value of their homes (Glaeser, Gyourko, and Saks 2005; Quigley and Rosenthal 2005; Rohe and Stewart 1996). Typically higher income homeowners are the ones who dominate local politics underlying land use enactments (Quigley and Rosenthal 2005). On the other hand, renters, who usually want lower prices, are expected to support policies and public spending that favor constructing new housing (Brunner, Ross, and Simonsen 2015; Desmond 2017). However, this dynamic cannot entirely explain persistent supply-discouraging regulations in major cities where homeownership rates are lower and pale in comparison to renters. 
+It is generally accepted that homeowners have an incentive to support regulations that raise the value of their homes (Glaeser, Gyourko, and Saks 2005; Quigley and Rosenthal 2005; Rohe and Stewart 1996). Typically higher income homeowners are the ones who dominate local politics underlying land use enactments (Quigley and Rosenthal 2005). On the other hand, renters, who usually want lower prices, are expected to support policies and public spending that favor constructing new housing (Brunner, Ross, and Simonsen 2015; Desmond 2017). 
 
-Hankinson hypothesizes that in high-rent cities, renters adopt a form of "Not in My Back Yard-ism" (NIMBY-ism). This would give rise to a collective action problem in the political-economy of local housing wherein despite supporting city-wide housing supply increases and other policies favoring affordable housing, renters oppose such policies in their own neighborhoods. As a result, no neighborhood is politically willing to bear the cost of new housing. While there is a rich existing literature on NIMBY-ism among homeowners (Dear 1992; Schively 2007), there has been comparatively little research done on the appearance of this behavior among renters (Fischel 2000). In fact, renters are expected to exhibit lower levels of NIMBY-ism as the ephemerality of renting means they have less of a stake in the good or bad things that happen in their neighborhoods (Moomau and Morton 1992). Renters' behavior in high-rent cities demands closer examination. What is driving renters to continue to enact housing regulations? And, what external and/or demographic factors cause renters policy behavior to become sensitive to the proximity  of proposed new housing? 
+So what role does renter behavior play in the decoupling of housing supply and demand? Further, what demographic and location characteristics are associated with this behavior?
+
+Hankinson attempts to answer these questions using original data from a San Francisco exit poll and a national survey. A significant innovation he makes is in using conjoint analysis, which has yet to be widely used in political science (Hainmueller, Hopkins, and Yamamoto 2013). The conjoint survey design allows the researcher to non-parametrically estimate which components of a multidimensional treatment are influential, so long as randomization is assumed. In his paper, the conjoint design enabled Hankinson to simultaneously test multiple causal effects by randomly varying one-dimensional characteristics of a hypothetical new housing development (proximity, density, affordability, etc.) and infer that systematic differences in respondences could be attributed entirely to the researcher's manipulation (Hankinson 2018; Hainmueller, Hopkins, and Yamamoto 2013)
+
+Hankinson finds that in high-rent cities, renters do exhibit form of "Not in My Back Yard-ism" (NIMBY-ism) on par with homeowners. He argues that this likely gives rise to a collective action problem in the political-economy of local housing wherein despite supporting city-wide housing supply increases and other policies favoring affordable housing, renters oppose such policies in their own neighborhoods. As a result, no neighborhood is politically willing to bear the cost of new housing (Hankinson 2018). While there is a rich existing literature on NIMBY-ism among homeowners (Dear 1992; Schively 2007), there has been comparatively little research done on the appearance of this behavior among renters (Fischel 2000). In fact, renters are expected to exhibit lower levels of NIMBY-ism as the ephemerality of renting means they have less of a stake in the good or bad things that happen in their neighborhoods (Moomau and Morton 1992). Thus, renters' behavior in high-rent cities demands closer examination. Hankinson further shows that renters' political behavior is sensitive to proximity and price. In particular, price-anxious renters in high-rent cities are more likely to exhibit NIMBY-ism in their voting preferences. He hypothesizes that despite general support for increased housing supply, this group of renters is sensitive to the possibility of gentrification that new development signals (Hankinson 2018).
 
 
 # Replication
@@ -42,7 +46,7 @@ Hankinson's original paper includes 27 figures. I have replicated 21 of them. Th
 
 # Extension
 
-I extend Hankinson's analysis by using logistic regression to refit three sets of models: the first set (table A.3) regresses an indicator variable for supporting a 10 \% housing supply increase and one for supporting a NIMBY ban onto homeownership status including demographic controls and fixed effects for the San Francisco data set; the second (table B.2) regresses an indicator for supporting a 10\% supply increase onto homeownership status including demographics and fixed effects for the natiowide data set; the third (table B.4) regresses an indicator for supporting a ban on neighborhood development (NIMBY ban) on homeownership status including demographic controls and fixed effects for the nationwide data set. While Hankinson fits ordinary least squares models, likely for ease of comparison, this risks violating normality of errors and allows the response variable to exceed the scope of 0 and 1 which breaks probability axioms. A logistic regression can better model a range of probabilities using the logistic function which is strictly between 0 and 1. 
+I extend Hankinson's analysis by using logistic regression to refit three sets of models: the first set (table A.3) regresses an indicator variable for supporting a 10 \% housing supply increase and one for supporting a NIMBY ban onto homeownership status including demographic controls and fixed effects for the San Francisco data set; the second (table B.2) regresses an indicator for supporting a 10\% supply increase onto homeownership status including demographics and fixed effects for the natiowide data set; the third (table B.4) regresses an indicator for supporting a ban on neighborhood development (NIMBY ban) on homeownership status including demographic controls and fixed effects for the nationwide data set. While Hankinson fits ordinary least squares models, perhaps for ease of comparison with his conjoint analysis, I thought that a logistic regression model would be more robust to the violation of the normality of errors and equal variance assumptions. Further, logistic regression bounds the fitted probability between 0 and 1, which better conforms to probability axioms. 
 
 The logistic output for the first set of regressions (table A.3) showed a consistently negative relationship between homeownership and both the probability of supporting a 10\% supply increase and for supporting a NIMBY ban. Using the divide by four rule, holding all else constant, homeowners are about 10\% less likely to support both the supply increase and the neighborhood ban than renters. These estimates, however, are not statistically significant. This is consistent with the OLS model which outputs a weak and consistently negative coefficients on homeownership status. The logistic output for the second set of regressions (table B.2) showed a consistently negative and statistically insignificant relationship between homeownership status and probability of supporting a 10\% supply increase. Using the divide by four rule, the logistic regression estimates that holding all else constant homeowners are at most 25\% less likely to support the increase. Although these estimates are constitent in sign and magnitude with the OLS estimates, the OLS coefficients are statistically significant. Finally, the logistic output for the third set of regressions (table B.4) showed a consistently positive and, once again, statistically insignificant relationship between homeownership and probability of supporting a ban on neighborhood development. Holding all else constant, homeowners are at most 7.5\%. more likely to support the ban than renters. This is again consistent with the OLS results with the primary difference being that the OLS coefficients are statistically significant at the $\alpha = .05$ level. 
 
@@ -218,48 +222,6 @@ stargazer(supply_simple,  supply_full , supply_full_fe, title="Support for 10 Pe
 
 ```
 
-## Extension of table B.3 Support for 10% Supply Increase—Seven-Point Scale
-
-```{r extension Table B.3, eval = FALSE, include = FALSE, results = 'asis'}
-
-# Table B.3. Support for 10 Percent Supply Increase - 7 Point Scale 
-
-# Load MASS packages
-
-library(MASS)
-
-# Factor the response variable
-
-socpoc$city_supply1 = as.factor(socpoc$city_supply)
-
-# Run Regressions
-
-# Bivariate
-
-supply_7_simple<-(polr(city_supply1 ~ own, socpoc))
-supply_7_simple_se<-sqrt(diag(vcov(supply_7_simple, type="HC1")))
-
-# Full
-
-supply_7_full<-(polr(city_supply1 ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, subset(socpoc)))
-supply_7_full_se<-sqrt(diag(vcov(supply_7_full, type="HC1")))
-
-# Full w/ fixed effects
-
-supply_7_full_fe<-(polr(city_supply1 ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
-supply_7_full_fe_se<-sqrt(diag(vcov(supply_7_full_fe, type="HC1")))
-
-# Create Table
-
-stargazer(supply_7_simple,  supply_7_full , supply_7_full_fe, title="Support for 10 Percent Supply Increase - 7 Point Scale", label="supply_7",
-          dep.var.labels=c("Support Supply Increase"),dep.var.labels.include = F, dep.var.caption = "",
-          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
-          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
-          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
-          initial.zero = F,  font.size = "small", star.cutoffs = NA, omit.table.layout = "n",
-          se=list(supply_7_simple_se, supply_7_full_se, supply_7_full_fe_se), no.space=T,omit=c("name"), table.placement = "H" )
-
-```
 
 ## Extension of table B.4 Support for Ban on Neighborhood Development
 
@@ -289,43 +251,6 @@ stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighbo
           initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
           se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
 
-```
-
-## Extension of table B.5 Support for Ban on Neighborhood Development—Seven-Point Scale
-
-```{r extension Table B.5, cache = TRUE, include = FALSE, eval = FALSE, results = 'asis'}
-
-# Table B.5. Support for Neighborhood Ban 7 point scale ####
-
-# Factor the response variable
-
-socpoc$neighborhood_ban1 = as.factor(socpoc$neighborhood_ban)
-
-# Run Regressions
-
-#simple
-
-ban_simple<-(polr(neighborhood_ban1 ~ own, socpoc))
-ban_simple_se<-sqrt(diag(vcov(ban_simple, type="HC1")))
-
-# full
-
-ban_full<-(polr(neighborhood_ban1 ~ own +scale(ideology)+scale(log(income)) + whitenh  +age + male, socpoc))
-ban_full_se<-sqrt(diag(vcov(ban_full, type="HC1")))
-
-#full w/ fixed effects
-
-ban_full_fe<-(polr(neighborhood_ban1 ~  own +scale(ideology)+ scale(log(income))+ whitenh  + age + male +factor(name), socpoc))
-ban_full_fe_se<-sqrt(diag(vcov(ban_full_fe, type="HC1")))
-
-# Table
-stargazer(ban_simple,  ban_full , ban_full_fe, title="Support for Ban on Neighborhood Development - 7 Point Scale", label="neighborhood_ban_7",
-          dep.var.labels=c("Support NIMBY Ban"),dep.var.labels.include = F, dep.var.caption = "",
-          column.labels=c("Bivariate","Full","Full with Fixed Effects"),
-          covariate.labels=c("Homeownership","Ideology","Income, Log","White, Non-Hispanic","Age","Male"),
-          omit.stat = c("ser", "f"), digits=2, align=T, type="latex",
-          initial.zero = F,  font.size = "small",star.cutoffs = NA, omit.table.layout = "n",
-          se=list(ban_simple_se, ban_full_se, ban_full_fe_se), no.space=T, omit=c("name"), table.placement = "H" )
 ```
 
 # Replication Results
@@ -1418,6 +1343,10 @@ owners_city_supply<-ggplot(mod2estimates, aes(x=Cost, y=Estimate))+scale_y_conti
 
 print(owners_city_supply)
 ```
+
+# Conclusion
+
+I replicated Michael Hankinson's paper, “When Do Renters Behave Like Homeowners? High Rent, Price Anxiety, and NIMBYism,” which explored renter political behavior in light of the decoupling of housing supply and demand in high-rent markets. My replication results were consistent with Hankinson's findings that renters do exhibit NIMBYism on par with homeowners and that this behavior is sensitive to price and proximity of new housing. I extended Hankinson's analysis by showing that his results showing that renters s in fact likely to oppose new and proximate housing when they live in high rent neighborhoods remain true when the data is fitted to logistic regression. This behavior likely gives rise to a collective action problem where pro-housing renters oppose the creation of new supply in their neighborhoods. If local governments want to take seriously the current affordable housing crisis, they ought to be aware that such a dynamic may arise when housing policy is legislated on a hyper-local level. 
 
 # Appendix
 
